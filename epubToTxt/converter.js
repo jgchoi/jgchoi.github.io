@@ -47,12 +47,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const zip = await JSZip.loadAsync(zipData);
             let textContent = '';
 
-            // Get container.xml content
-            const containerFile = zip.file('META-INF/container.xml');
+            // Debug - List all files in the EPUB
+            const files = Object.keys(zip.files);
+            console.log('All files in EPUB:', files);
+
+            // Get container.xml content - use case-insensitive path
+            const containerPath = files.find(path => path.toLowerCase() === 'meta-inf/container.xml');
+            const containerFile = zip.file(containerPath);
             if (!containerFile) {
                 throw new Error('Invalid EPUB: Missing container.xml');
             }
             const containerXml = await containerFile.async('text');
+            console.log('Container XML:', containerXml);
             
             // Extract root file path more safely
             const rootFileMatch = containerXml.match(/full-path=["']([^"']*?)["']/);
@@ -60,13 +66,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('Cannot find content.opf path');
             }
             const rootFilePath = rootFileMatch[1];
+            console.log('Root file path:', rootFilePath);
             
-            // Get content.opf
-            const contentOpfFile = zip.file(rootFilePath);
+            // Get content.opf - normalize path separators
+            const normalizedRootPath = rootFilePath.replace(/\\/g, '/');
+            const contentOpfFile = zip.file(normalizedRootPath);
             if (!contentOpfFile) {
-                throw new Error('Cannot find content.opf file');
+                throw new Error(`Cannot find content.opf file at path: ${normalizedRootPath}`);
             }
             const contentOpf = await contentOpfFile.async('text');
+            console.log('Content OPF:', contentOpf);
 
             // Extract spine items more safely
             const spineMatch = contentOpf.match(/<spine[^>]*>([\s\S]*?)<\/spine>/);
@@ -76,28 +85,54 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const spineItems = [...spineMatch[1].matchAll(/idref=["']([^"']+)["']/g)]
                 .map(match => match[1]);
+            console.log('Spine items:', spineItems);
 
             // Map manifest items more safely
             const manifestItems = {};
-            const manifestMatches = [...contentOpf.matchAll(/<item[^>]*?id=["']([^"']+)["'][^>]*?href=["']([^"']+)["'][^>]*?>/g)];
-            
-            for (const match of manifestMatches) {
-                manifestItems[match[1]] = match[2];
-            }
+            const manifestMatches = contentOpf.match(/<item[^>]*?>/g) || [];
+            manifestMatches.forEach(item => {
+                const idMatch = item.match(/id=["']([^"']+)["']/);
+                const hrefMatch = item.match(/href=["']([^"']+)["']/);
+                if (idMatch && hrefMatch) {
+                    const id = idMatch[1];
+                    const href = hrefMatch[1];
+                    manifestItems[id] = href;
+                }
+            });
+            console.log('Manifest items:', manifestItems);
 
             // Get base directory
             const baseDir = rootFilePath.includes('/') 
                 ? rootFilePath.substring(0, rootFilePath.lastIndexOf('/') + 1) 
                 : '';
 
-            // Process files
+            // When processing files, normalize all paths
             for (const itemId of spineItems) {
                 const relativePath = manifestItems[itemId];
+                // additional debug info
+                console.log('Processing spine item:', itemId, 'with path:', relativePath);
                 if (relativePath) {
-                    const fullPath = baseDir + relativePath;
-                    const content = await zip.file(fullPath)?.async('text');
+                    // Normalize the path joining
+                    const fullPath = (baseDir + relativePath).replace(/\\/g, '/');
+                    console.log('Attempting to process:', fullPath);
+                    
+                    // Try both the direct path and with OEBPS prefix
+                    let file = zip.file(fullPath);
+                    if (!file) {
+                        // Try with OEBPS prefix if not found
+                        const oebpsPath = 'OEBPS/' + fullPath;
+                        file = zip.file(oebpsPath);
+                        console.log('Trying alternate path:', oebpsPath);
+                    }
+
+                    if (!file) {
+                        console.warn('File not found:', fullPath);
+                        continue;
+                    }
+
+                    const content = await file.async('text');
                     if (content) {
-                        // Convert HTML to plain text
+                        console.log('Content found for:', fullPath);
                         const textOnly = content
                             .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
                             .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
@@ -105,7 +140,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             .replace(/&nbsp;/g, ' ')
                             .replace(/\s+/g, ' ')
                             .trim();
-                        textContent += textOnly + '\n\n';
+                        
+                        if (textOnly) {
+                            textContent += textOnly + '\n\n';
+                        }
                     }
                 }
             }
@@ -127,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             output.textContent = 'Conversion completed! File downloaded.';
         } catch (error) {
-            console.error('Detailed error:', error);
+            console.error('Conversion error:', error);
             output.textContent = 'Error converting file: ' + error.message;
         }
     });
