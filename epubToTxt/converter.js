@@ -172,6 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
                         .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
                         .replace(/<[^>]+>/g, '')
                         .replace(/&nbsp;/g, ' ')
+                        .replace(/Section\d+\.html/gi, '') // Remove section file names
+                        .replace(/Chapter\s*\d+/gi, '')    // Remove chapter headers
+                        .replace(/Section\s*\d+/gi, '')    // Remove section headers
                         .replace(/\s+/g, ' ')
                         .trim();
                     
@@ -200,21 +203,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Keep the existing processText function
     function processText(text) {
-        // Remove "Cover" from the beginning
-        text = text.replace(/^Cover\n+/, '');
+        // Remove "Cover" and section headers from the beginning
+        text = text
+            .replace(/^Cover\n+/, '')
+            .replace(/^Section\d+\.html\s*/gm, '')
+            .replace(/^Chapter\s*\d+\s*/gm, '')
+            .replace(/^Section\s*\d+\s*/gm, '');
         
-        // Split into sentences while preserving original line breaks
-        // This regex looks for sentence endings (.!?) followed by a space or newline
-        const sentences = text.split(/([.!?])\s+/);
+        // Split into sentences and add line breaks
+        const sentences = text
+            .split(/([.!?])\s+/)
+            .filter(Boolean); // Remove empty strings
         
         // Rejoin sentences with double newlines
         let processedText = '';
         for (let i = 0; i < sentences.length - 1; i += 2) {
-            if (i + 1 < sentences.length) {
-                processedText += sentences[i] + sentences[i + 1] + '\n\n';
-            }
+            const sentence = sentences[i];
+            const punctuation = sentences[i + 1] || '';
+            processedText += sentence + punctuation + '\n\n';
         }
         
-        return processedText.trim();
+        // Final cleanup
+        return processedText
+            .replace(/^\s+/gm, '')        // Remove leading whitespace from each line
+            .replace(/\n{3,}/g, '\n\n')   // Replace multiple newlines with double newlines
+            .replace(/([.!?])\n/g, '$1\n\n') // Ensure double newline after each sentence
+            .trim();
     }
+
+    // Add click handler for drop zone
+    dropZone.addEventListener('click', () => {
+        fileInput.click(); // Trigger file input when drop zone is clicked
+    });
+
+    // Prevent click propagation on file input to avoid double triggers
+    fileInput.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
 });
