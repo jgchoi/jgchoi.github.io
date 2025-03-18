@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const fileInput = document.getElementById('fileInput');
     const convertBtn = document.getElementById('convertBtn');
     const output = document.getElementById('output');
+    const fileList = document.getElementById('fileList');
     let selectedFiles = []; // Changed from selectedFile to selectedFiles array
 
     // Update file input to accept multiple files
@@ -44,8 +45,41 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleFiles(files) {
         selectedFiles = files;
-        convertBtn.disabled = false;
-        output.textContent = `Selected ${files.length} file(s): ${files.map(f => f.name).join(', ')}`;
+        convertBtn.disabled = selectedFiles.length === 0;
+        updateFileList();
+    }
+
+    function updateFileList() {
+        fileList.innerHTML = '';
+        Array.from(selectedFiles).forEach((file, index) => {
+            const fileItem = document.createElement('div');
+            fileItem.className = 'file-item';
+            fileItem.innerHTML = `
+                <span>${file.name}</span>
+                <button class="remove-file" data-index="${index}">&times;</button>
+            `;
+            fileList.appendChild(fileItem);
+        });
+
+        // Add click handlers for remove buttons
+        const removeButtons = fileList.getElementsByClassName('remove-file');
+        Array.from(removeButtons).forEach(button => {
+            button.addEventListener('click', (e) => {
+                const index = parseInt(e.target.dataset.index);
+                selectedFiles = Array.from(selectedFiles).filter((_, i) => i !== index);
+                updateFileList();
+                convertBtn.disabled = selectedFiles.length === 0;
+                if (selectedFiles.length === 0) {
+                    output.textContent = 'No files selected';
+                } else {
+                    output.textContent = `Selected ${selectedFiles.length} file(s)`;
+                }
+            });
+        });
+
+        if (selectedFiles.length === 0) {
+            fileList.innerHTML = '<div class="no-files">No files selected</div>';
+        }
     }
 
     // Update convert button handler
