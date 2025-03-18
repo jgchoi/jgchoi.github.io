@@ -1,0 +1,3207 @@
+converter.js:86 All files in EPUB: (405) ['mimetype', 'META-INF/container.xml', 'OEBPS/content.opf', 'OEBPS/Images/12.png', 'OEBPS/Images/16.png', 'OEBPS/Images/cover.jpg', 'OEBPS/Styles/sgc-nav.css', 'OEBPS/Styles/sgc-toc.css', 'OEBPS/Styles/Stylesheet.css', 'OEBPS/Text/cover.html', 'OEBPS/Text/nav.xhtml', 'OEBPS/Text/Section0001 (1).html', 'OEBPS/Text/Section0001 (10).html', 'OEBPS/Text/Section0001 (100).html', 'OEBPS/Text/Section0001 (101).html', 'OEBPS/Text/Section0001 (102).html', 'OEBPS/Text/Section0001 (103).html', 'OEBPS/Text/Section0001 (104).html', 'OEBPS/Text/Section0001 (105).html', 'OEBPS/Text/Section0001 (106).html', 'OEBPS/Text/Section0001 (107).html', 'OEBPS/Text/Section0001 (108).html', 'OEBPS/Text/Section0001 (109).html', 'OEBPS/Text/Section0001 (11).html', 'OEBPS/Text/Section0001 (110).html', 'OEBPS/Text/Section0001 (111).html', 'OEBPS/Text/Section0001 (112).html', 'OEBPS/Text/Section0001 (113).html', 'OEBPS/Text/Section0001 (114).html', 'OEBPS/Text/Section0001 (115).html', 'OEBPS/Text/Section0001 (116).html', 'OEBPS/Text/Section0001 (117).html', 'OEBPS/Text/Section0001 (118).html', 'OEBPS/Text/Section0001 (119).html', 'OEBPS/Text/Section0001 (12).html', 'OEBPS/Text/Section0001 (120).html', 'OEBPS/Text/Section0001 (121).html', 'OEBPS/Text/Section0001 (122).html', 'OEBPS/Text/Section0001 (123).html', 'OEBPS/Text/Section0001 (124).html', 'OEBPS/Text/Section0001 (125).html', 'OEBPS/Text/Section0001 (126).html', 'OEBPS/Text/Section0001 (127).html', 'OEBPS/Text/Section0001 (128).html', 'OEBPS/Text/Section0001 (129).html', 'OEBPS/Text/Section0001 (13).html', 'OEBPS/Text/Section0001 (130).html', 'OEBPS/Text/Section0001 (131).html', 'OEBPS/Text/Section0001 (132).html', 'OEBPS/Text/Section0001 (133).html', 'OEBPS/Text/Section0001 (134).html', 'OEBPS/Text/Section0001 (135).html', 'OEBPS/Text/Section0001 (136).html', 'OEBPS/Text/Section0001 (137).html', 'OEBPS/Text/Section0001 (138).html', 'OEBPS/Text/Section0001 (139).html', 'OEBPS/Text/Section0001 (14).html', 'OEBPS/Text/Section0001 (140).html', 'OEBPS/Text/Section0001 (141).html', 'OEBPS/Text/Section0001 (142).html', 'OEBPS/Text/Section0001 (143).html', 'OEBPS/Text/Section0001 (144).html', 'OEBPS/Text/Section0001 (145).html', 'OEBPS/Text/Section0001 (146).html', 'OEBPS/Text/Section0001 (147).html', 'OEBPS/Text/Section0001 (148).html', 'OEBPS/Text/Section0001 (149).html', 'OEBPS/Text/Section0001 (15).html', 'OEBPS/Text/Section0001 (150).html', 'OEBPS/Text/Section0001 (151).html', 'OEBPS/Text/Section0001 (152).html', 'OEBPS/Text/Section0001 (153).html', 'OEBPS/Text/Section0001 (154).html', 'OEBPS/Text/Section0001 (155).html', 'OEBPS/Text/Section0001 (156).html', 'OEBPS/Text/Section0001 (157).html', 'OEBPS/Text/Section0001 (158).html', 'OEBPS/Text/Section0001 (159).html', 'OEBPS/Text/Section0001 (16).html', 'OEBPS/Text/Section0001 (160).html', 'OEBPS/Text/Section0001 (161).html', 'OEBPS/Text/Section0001 (162).html', 'OEBPS/Text/Section0001 (163).html', 'OEBPS/Text/Section0001 (164).html', 'OEBPS/Text/Section0001 (165).html', 'OEBPS/Text/Section0001 (166).html', 'OEBPS/Text/Section0001 (167).html', 'OEBPS/Text/Section0001 (168).html', 'OEBPS/Text/Section0001 (169).html', 'OEBPS/Text/Section0001 (17).html', 'OEBPS/Text/Section0001 (170).html', 'OEBPS/Text/Section0001 (171).html', 'OEBPS/Text/Section0001 (172).html', 'OEBPS/Text/Section0001 (173).html', 'OEBPS/Text/Section0001 (174).html', 'OEBPS/Text/Section0001 (175).html', 'OEBPS/Text/Section0001 (176).html', 'OEBPS/Text/Section0001 (177).html', 'OEBPS/Text/Section0001 (178).html', 'OEBPS/Text/Section0001 (179).html', …]
+ Container XML: <?xml version="1.0" encoding="UTF-8"?>
+<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
+    <rootfiles>
+        <rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>
+   </rootfiles>
+</container>
+
+ Root file path: OEBPS/content.opf
+ Content OPF: <?xml version="1.0" encoding="utf-8"?>
+<package version="3.0" unique-identifier="BookId" prefix="rendition: http://www.idpf.org/vocab/rendition/#" xmlns="http://www.idpf.org/2007/opf">
+  <metadata xmlns:opf="http://www.idpf.org/2007/opf" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <dc:title>던전리셋 1-393 완</dc:title>
+    <dc:language>ko</dc:language>
+    <dc:creator id="creator">다울</dc:creator>
+    <dc:identifier id="BookId">50594147</dc:identifier>
+    <meta name="cover" content="Images/cover.jpg" />
+    <meta content="https://t.me/LamuCITY" name="made_by" />
+    <meta content="0.9.10" name="Sigil version" />
+    <meta property="dcterms:modified">2022-08-29T17:12:41Z</meta>
+  </metadata>
+  <manifest>
+    <item id="Styles/Stylesheet.css" href="Styles/Stylesheet.css" media-type="text/css"/>
+    <item id="Styles/sgc-toc.css" href="Styles/sgc-toc.css" media-type="text/css"/>
+    <item id="Images/cover.jpg" href="Images/cover.jpg" media-type="image/jpeg"/>
+    <item id="Text/cover.html" href="Text/cover.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001.html" href="Text/Section0001.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (1).html" href="Text/Section0001%20%281%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (2).html" href="Text/Section0001%20%282%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (3).html" href="Text/Section0001%20%283%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (4).html" href="Text/Section0001%20%284%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (5).html" href="Text/Section0001%20%285%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (6).html" href="Text/Section0001%20%286%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (7).html" href="Text/Section0001%20%287%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (8).html" href="Text/Section0001%20%288%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (9).html" href="Text/Section0001%20%289%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (10).html" href="Text/Section0001%20%2810%29.html" media-type="application/xhtml+xml"/>
+    <item id="Images/12.png" href="Images/12.png" media-type="image/png"/>
+    <item id="Text/Section0001 (11).html" href="Text/Section0001%20%2811%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (12).html" href="Text/Section0001%20%2812%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (13).html" href="Text/Section0001%20%2813%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (14).html" href="Text/Section0001%20%2814%29.html" media-type="application/xhtml+xml"/>
+    <item id="Images/16.png" href="Images/16.png" media-type="image/png"/>
+    <item id="Text/Section0001 (15).html" href="Text/Section0001%20%2815%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (16).html" href="Text/Section0001%20%2816%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (17).html" href="Text/Section0001%20%2817%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (18).html" href="Text/Section0001%20%2818%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (19).html" href="Text/Section0001%20%2819%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (20).html" href="Text/Section0001%20%2820%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (21).html" href="Text/Section0001%20%2821%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (22).html" href="Text/Section0001%20%2822%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (23).html" href="Text/Section0001%20%2823%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (24).html" href="Text/Section0001%20%2824%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (25).html" href="Text/Section0001%20%2825%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (26).html" href="Text/Section0001%20%2826%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (27).html" href="Text/Section0001%20%2827%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (28).html" href="Text/Section0001%20%2828%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (29).html" href="Text/Section0001%20%2829%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (30).html" href="Text/Section0001%20%2830%29.html" media-type="application/xhtml+xml"/>
+    <item id="Text/Section0001 (31).html" href="Text/Section0001%20%2831%29.html" med
+ Spine items: (395) ['Text/cover.html', 'Text/Section0001.html', 'Text/Section0001 (1).html', 'Text/Section0001 (2).html', 'Text/Section0001 (3).html', 'Text/Section0001 (4).html', 'Text/Section0001 (5).html', 'Text/Section0001 (6).html', 'Text/Section0001 (7).html', 'Text/Section0001 (8).html', 'Text/Section0001 (9).html', 'Text/Section0001 (10).html', 'Text/Section0001 (11).html', 'Text/Section0001 (12).html', 'Text/Section0001 (13).html', 'Text/Section0001 (14).html', 'Text/Section0001 (15).html', 'Text/Section0001 (16).html', 'Text/Section0001 (17).html', 'Text/Section0001 (18).html', 'Text/Section0001 (19).html', 'Text/Section0001 (20).html', 'Text/Section0001 (21).html', 'Text/Section0001 (22).html', 'Text/Section0001 (23).html', 'Text/Section0001 (24).html', 'Text/Section0001 (25).html', 'Text/Section0001 (26).html', 'Text/Section0001 (27).html', 'Text/Section0001 (28).html', 'Text/Section0001 (29).html', 'Text/Section0001 (30).html', 'Text/Section0001 (31).html', 'Text/Section0001 (32).html', 'Text/Section0001 (33).html', 'Text/Section0001 (34).html', 'Text/Section0001 (35).html', 'Text/Section0001 (36).html', 'Text/Section0001 (37).html', 'Text/Section0001 (38).html', 'Text/Section0001 (39).html', 'Text/Section0001 (40).html', 'Text/Section0001 (41).html', 'Text/Section0001 (42).html', 'Text/Section0001 (43).html', 'Text/Section0001 (44).html', 'Text/Section0001 (45).html', 'Text/Section0001 (46).html', 'Text/Section0001 (47).html', 'Text/Section0001 (48).html', 'Text/Section0001 (49).html', 'Text/Section0001 (50).html', 'Text/Section0001 (51).html', 'Text/Section0001 (52).html', 'Text/Section0001 (53).html', 'Text/Section0001 (54).html', 'Text/Section0001 (55).html', 'Text/Section0001 (56).html', 'Text/Section0001 (57).html', 'Text/Section0001 (58).html', 'Text/Section0001 (59).html', 'Text/Section0001 (60).html', 'Text/Section0001 (61).html', 'Text/Section0001 (62).html', 'Text/Section0001 (63).html', 'Text/Section0001 (64).html', 'Text/Section0001 (65).html', 'Text/Section0001 (66).html', 'Text/Section0001 (67).html', 'Text/Section0001 (68).html', 'Text/Section0001 (69).html', 'Text/Section0001 (70).html', 'Text/Section0001 (71).html', 'Text/Section0001 (72).html', 'Text/Section0001 (73).html', 'Text/Section0001 (74).html', 'Text/Section0001 (75).html', 'Text/Section0001 (76).html', 'Text/Section0001 (77).html', 'Text/Section0001 (78).html', 'Text/Section0001 (79).html', 'Text/Section0001 (80).html', 'Text/Section0001 (81).html', 'Text/Section0001 (82).html', 'Text/Section0001 (83).html', 'Text/Section0001 (84).html', 'Text/Section0001 (85).html', 'Text/Section0001 (86).html', 'Text/Section0001 (87).html', 'Text/Section0001 (88).html', 'Text/Section0001 (89).html', 'Text/Section0001 (90).html', 'Text/Section0001 (91).html', 'Text/Section0001 (92).html', 'Text/Section0001 (93).html', 'Text/Section0001 (94).html', 'Text/Section0001 (95).html', 'Text/Section0001 (96).html', 'Text/Section0001 (97).html', 'Text/Section0001 (98).html', …]
+ Manifest items: {Styles/Stylesheet.css: 'Styles/Stylesheet.css', Styles/sgc-toc.css: 'Styles/sgc-toc.css', Images/cover.jpg: 'Images/cover.jpg', Text/cover.html: 'Text/cover.html', Text/Section0001.html: 'Text/Section0001.html', …}
+ Processing spine item: Text/cover.html with path: Text/cover.html
+ Attempting to process: OEBPS/Text/cover.html
+ Content found for: OEBPS/Text/cover.html
+ Processing spine item: Text/Section0001.html with path: Text/Section0001.html
+ Attempting to process: OEBPS/Text/Section0001.html
+ Content found for: OEBPS/Text/Section0001.html
+ Processing spine item: Text/Section0001 (1).html with path: Text/Section0001%20%281%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%281%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%281%29.html
+ File not found: OEBPS/Text/Section0001%20%281%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (2).html with path: Text/Section0001%20%282%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%282%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%282%29.html
+ File not found: OEBPS/Text/Section0001%20%282%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (3).html with path: Text/Section0001%20%283%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%283%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%283%29.html
+ File not found: OEBPS/Text/Section0001%20%283%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (4).html with path: Text/Section0001%20%284%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%284%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%284%29.html
+ File not found: OEBPS/Text/Section0001%20%284%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (5).html with path: Text/Section0001%20%285%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%285%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%285%29.html
+ File not found: OEBPS/Text/Section0001%20%285%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (6).html with path: Text/Section0001%20%286%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%286%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%286%29.html
+ File not found: OEBPS/Text/Section0001%20%286%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (7).html with path: Text/Section0001%20%287%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%287%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%287%29.html
+ File not found: OEBPS/Text/Section0001%20%287%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (8).html with path: Text/Section0001%20%288%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%288%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%288%29.html
+ File not found: OEBPS/Text/Section0001%20%288%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (9).html with path: Text/Section0001%20%289%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%289%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%289%29.html
+ File not found: OEBPS/Text/Section0001%20%289%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (10).html with path: Text/Section0001%20%2810%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2810%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2810%29.html
+ File not found: OEBPS/Text/Section0001%20%2810%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (11).html with path: Text/Section0001%20%2811%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2811%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2811%29.html
+ File not found: OEBPS/Text/Section0001%20%2811%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (12).html with path: Text/Section0001%20%2812%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2812%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2812%29.html
+ File not found: OEBPS/Text/Section0001%20%2812%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (13).html with path: Text/Section0001%20%2813%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2813%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2813%29.html
+ File not found: OEBPS/Text/Section0001%20%2813%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (14).html with path: Text/Section0001%20%2814%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2814%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2814%29.html
+ File not found: OEBPS/Text/Section0001%20%2814%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (15).html with path: Text/Section0001%20%2815%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2815%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2815%29.html
+ File not found: OEBPS/Text/Section0001%20%2815%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (16).html with path: Text/Section0001%20%2816%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2816%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2816%29.html
+ File not found: OEBPS/Text/Section0001%20%2816%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (17).html with path: Text/Section0001%20%2817%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2817%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2817%29.html
+ File not found: OEBPS/Text/Section0001%20%2817%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (18).html with path: Text/Section0001%20%2818%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2818%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2818%29.html
+ File not found: OEBPS/Text/Section0001%20%2818%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (19).html with path: Text/Section0001%20%2819%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2819%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2819%29.html
+ File not found: OEBPS/Text/Section0001%20%2819%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (20).html with path: Text/Section0001%20%2820%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2820%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2820%29.html
+ File not found: OEBPS/Text/Section0001%20%2820%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (21).html with path: Text/Section0001%20%2821%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2821%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2821%29.html
+ File not found: OEBPS/Text/Section0001%20%2821%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (22).html with path: Text/Section0001%20%2822%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2822%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2822%29.html
+ File not found: OEBPS/Text/Section0001%20%2822%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (23).html with path: Text/Section0001%20%2823%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2823%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2823%29.html
+ File not found: OEBPS/Text/Section0001%20%2823%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (24).html with path: Text/Section0001%20%2824%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2824%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2824%29.html
+ File not found: OEBPS/Text/Section0001%20%2824%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (25).html with path: Text/Section0001%20%2825%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2825%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2825%29.html
+ File not found: OEBPS/Text/Section0001%20%2825%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (26).html with path: Text/Section0001%20%2826%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2826%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2826%29.html
+ File not found: OEBPS/Text/Section0001%20%2826%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (27).html with path: Text/Section0001%20%2827%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2827%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2827%29.html
+ File not found: OEBPS/Text/Section0001%20%2827%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (28).html with path: Text/Section0001%20%2828%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2828%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2828%29.html
+ File not found: OEBPS/Text/Section0001%20%2828%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (29).html with path: Text/Section0001%20%2829%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2829%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2829%29.html
+ File not found: OEBPS/Text/Section0001%20%2829%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (30).html with path: Text/Section0001%20%2830%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2830%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2830%29.html
+ File not found: OEBPS/Text/Section0001%20%2830%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (31).html with path: Text/Section0001%20%2831%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2831%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2831%29.html
+ File not found: OEBPS/Text/Section0001%20%2831%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (32).html with path: Text/Section0001%20%2832%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2832%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2832%29.html
+ File not found: OEBPS/Text/Section0001%20%2832%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (33).html with path: Text/Section0001%20%2833%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2833%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2833%29.html
+ File not found: OEBPS/Text/Section0001%20%2833%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (34).html with path: Text/Section0001%20%2834%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2834%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2834%29.html
+ File not found: OEBPS/Text/Section0001%20%2834%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (35).html with path: Text/Section0001%20%2835%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2835%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2835%29.html
+ File not found: OEBPS/Text/Section0001%20%2835%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (36).html with path: Text/Section0001%20%2836%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2836%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2836%29.html
+ File not found: OEBPS/Text/Section0001%20%2836%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (37).html with path: Text/Section0001%20%2837%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2837%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2837%29.html
+ File not found: OEBPS/Text/Section0001%20%2837%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (38).html with path: Text/Section0001%20%2838%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2838%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2838%29.html
+ File not found: OEBPS/Text/Section0001%20%2838%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (39).html with path: Text/Section0001%20%2839%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2839%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2839%29.html
+ File not found: OEBPS/Text/Section0001%20%2839%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (40).html with path: Text/Section0001%20%2840%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2840%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2840%29.html
+ File not found: OEBPS/Text/Section0001%20%2840%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (41).html with path: Text/Section0001%20%2841%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2841%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2841%29.html
+ File not found: OEBPS/Text/Section0001%20%2841%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (42).html with path: Text/Section0001%20%2842%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2842%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2842%29.html
+ File not found: OEBPS/Text/Section0001%20%2842%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (43).html with path: Text/Section0001%20%2843%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2843%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2843%29.html
+ File not found: OEBPS/Text/Section0001%20%2843%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (44).html with path: Text/Section0001%20%2844%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2844%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2844%29.html
+ File not found: OEBPS/Text/Section0001%20%2844%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (45).html with path: Text/Section0001%20%2845%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2845%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2845%29.html
+ File not found: OEBPS/Text/Section0001%20%2845%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (46).html with path: Text/Section0001%20%2846%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2846%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2846%29.html
+ File not found: OEBPS/Text/Section0001%20%2846%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (47).html with path: Text/Section0001%20%2847%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2847%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2847%29.html
+ File not found: OEBPS/Text/Section0001%20%2847%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (48).html with path: Text/Section0001%20%2848%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2848%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2848%29.html
+ File not found: OEBPS/Text/Section0001%20%2848%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (49).html with path: Text/Section0001%20%2849%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2849%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2849%29.html
+ File not found: OEBPS/Text/Section0001%20%2849%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (50).html with path: Text/Section0001%20%2850%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2850%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2850%29.html
+ File not found: OEBPS/Text/Section0001%20%2850%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (51).html with path: Text/Section0001%20%2851%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2851%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2851%29.html
+ File not found: OEBPS/Text/Section0001%20%2851%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (52).html with path: Text/Section0001%20%2852%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2852%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2852%29.html
+ File not found: OEBPS/Text/Section0001%20%2852%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (53).html with path: Text/Section0001%20%2853%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2853%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2853%29.html
+ File not found: OEBPS/Text/Section0001%20%2853%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (54).html with path: Text/Section0001%20%2854%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2854%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2854%29.html
+ File not found: OEBPS/Text/Section0001%20%2854%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (55).html with path: Text/Section0001%20%2855%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2855%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2855%29.html
+ File not found: OEBPS/Text/Section0001%20%2855%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (56).html with path: Text/Section0001%20%2856%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2856%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2856%29.html
+ File not found: OEBPS/Text/Section0001%20%2856%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (57).html with path: Text/Section0001%20%2857%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2857%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2857%29.html
+ File not found: OEBPS/Text/Section0001%20%2857%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (58).html with path: Text/Section0001%20%2858%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2858%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2858%29.html
+ File not found: OEBPS/Text/Section0001%20%2858%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (59).html with path: Text/Section0001%20%2859%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2859%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2859%29.html
+ File not found: OEBPS/Text/Section0001%20%2859%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (60).html with path: Text/Section0001%20%2860%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2860%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2860%29.html
+ File not found: OEBPS/Text/Section0001%20%2860%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (61).html with path: Text/Section0001%20%2861%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2861%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2861%29.html
+ File not found: OEBPS/Text/Section0001%20%2861%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (62).html with path: Text/Section0001%20%2862%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2862%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2862%29.html
+ File not found: OEBPS/Text/Section0001%20%2862%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (63).html with path: Text/Section0001%20%2863%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2863%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2863%29.html
+ File not found: OEBPS/Text/Section0001%20%2863%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (64).html with path: Text/Section0001%20%2864%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2864%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2864%29.html
+ File not found: OEBPS/Text/Section0001%20%2864%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (65).html with path: Text/Section0001%20%2865%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%2865%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2865%29.html
+ File not found: OEBPS/Text/Section0001%20%2865%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (66).html with path: Text/Section0001%20%2866%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2866%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2866%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2866%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (67).html with path: Text/Section0001%20%2867%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2867%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2867%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2867%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (68).html with path: Text/Section0001%20%2868%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2868%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2868%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2868%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (69).html with path: Text/Section0001%20%2869%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2869%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2869%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2869%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (70).html with path: Text/Section0001%20%2870%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2870%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2870%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2870%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (71).html with path: Text/Section0001%20%2871%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2871%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2871%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2871%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (72).html with path: Text/Section0001%20%2872%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2872%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2872%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2872%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (73).html with path: Text/Section0001%20%2873%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2873%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2873%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2873%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (74).html with path: Text/Section0001%20%2874%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2874%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2874%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2874%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (75).html with path: Text/Section0001%20%2875%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2875%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2875%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2875%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (76).html with path: Text/Section0001%20%2876%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2876%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2876%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2876%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (77).html with path: Text/Section0001%20%2877%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2877%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2877%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2877%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (78).html with path: Text/Section0001%20%2878%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2878%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2878%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2878%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (79).html with path: Text/Section0001%20%2879%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2879%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2879%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2879%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (80).html with path: Text/Section0001%20%2880%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2880%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2880%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2880%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (81).html with path: Text/Section0001%20%2881%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2881%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2881%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2881%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (82).html with path: Text/Section0001%20%2882%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2882%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2882%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2882%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (83).html with path: Text/Section0001%20%2883%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2883%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2883%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2883%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (84).html with path: Text/Section0001%20%2884%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2884%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2884%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2884%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (85).html with path: Text/Section0001%20%2885%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2885%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2885%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2885%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (86).html with path: Text/Section0001%20%2886%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2886%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2886%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2886%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (87).html with path: Text/Section0001%20%2887%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2887%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2887%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2887%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (88).html with path: Text/Section0001%20%2888%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2888%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2888%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2888%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (89).html with path: Text/Section0001%20%2889%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2889%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2889%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2889%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (90).html with path: Text/Section0001%20%2890%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2890%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2890%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2890%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (91).html with path: Text/Section0001%20%2891%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2891%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2891%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2891%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (92).html with path: Text/Section0001%20%2892%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2892%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2892%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2892%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (93).html with path: Text/Section0001%20%2893%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2893%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2893%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2893%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (94).html with path: Text/Section0001%20%2894%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2894%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2894%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2894%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (95).html with path: Text/Section0001%20%2895%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2895%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2895%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2895%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (96).html with path: Text/Section0001%20%2896%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2896%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2896%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2896%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (97).html with path: Text/Section0001%20%2897%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2897%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2897%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2897%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (98).html with path: Text/Section0001%20%2898%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2898%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2898%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2898%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (99).html with path: Text/Section0001%20%2899%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%2899%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%2899%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%2899%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (100).html with path: Text/Section0001%20%28100%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28100%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28100%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28100%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (101).html with path: Text/Section0001%20%28101%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28101%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28101%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28101%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (102).html with path: Text/Section0001%20%28102%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28102%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28102%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28102%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (103).html with path: Text/Section0001%20%28103%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28103%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28103%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28103%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (104).html with path: Text/Section0001%20%28104%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28104%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28104%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28104%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (105).html with path: Text/Section0001%20%28105%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28105%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28105%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28105%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (106).html with path: Text/Section0001%20%28106%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28106%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28106%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28106%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (107).html with path: Text/Section0001%20%28107%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28107%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28107%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28107%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (108).html with path: Text/Section0001%20%28108%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28108%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28108%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28108%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (109).html with path: Text/Section0001%20%28109%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28109%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28109%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28109%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (110).html with path: Text/Section0001%20%28110%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28110%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28110%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28110%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (111).html with path: Text/Section0001%20%28111%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28111%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28111%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28111%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (112).html with path: Text/Section0001%20%28112%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28112%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28112%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28112%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (113).html with path: Text/Section0001%20%28113%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28113%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28113%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28113%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (114).html with path: Text/Section0001%20%28114%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28114%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28114%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28114%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (115).html with path: Text/Section0001%20%28115%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28115%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28115%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28115%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (116).html with path: Text/Section0001%20%28116%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28116%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28116%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28116%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (117).html with path: Text/Section0001%20%28117%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28117%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28117%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28117%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (118).html with path: Text/Section0001%20%28118%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28118%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28118%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28118%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (119).html with path: Text/Section0001%20%28119%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28119%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28119%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28119%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (120).html with path: Text/Section0001%20%28120%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28120%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28120%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28120%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (121).html with path: Text/Section0001%20%28121%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28121%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28121%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28121%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (122).html with path: Text/Section0001%20%28122%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28122%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28122%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28122%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (123).html with path: Text/Section0001%20%28123%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28123%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28123%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28123%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (124).html with path: Text/Section0001%20%28124%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28124%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28124%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28124%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (125).html with path: Text/Section0001%20%28125%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28125%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28125%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28125%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (126).html with path: Text/Section0001%20%28126%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28126%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28126%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28126%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (127).html with path: Text/Section0001%20%28127%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28127%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28127%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28127%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (128).html with path: Text/Section0001%20%28128%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28128%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28128%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28128%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (129).html with path: Text/Section0001%20%28129%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28129%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28129%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28129%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (130).html with path: Text/Section0001%20%28130%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28130%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28130%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28130%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (131).html with path: Text/Section0001%20%28131%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28131%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28131%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28131%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (132).html with path: Text/Section0001%20%28132%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28132%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28132%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28132%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (133).html with path: Text/Section0001%20%28133%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28133%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28133%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28133%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (134).html with path: Text/Section0001%20%28134%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28134%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28134%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28134%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (135).html with path: Text/Section0001%20%28135%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28135%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28135%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28135%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (136).html with path: Text/Section0001%20%28136%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28136%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28136%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28136%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (137).html with path: Text/Section0001%20%28137%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28137%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28137%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28137%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (138).html with path: Text/Section0001%20%28138%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28138%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28138%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28138%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (139).html with path: Text/Section0001%20%28139%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28139%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28139%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28139%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (140).html with path: Text/Section0001%20%28140%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28140%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28140%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28140%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (141).html with path: Text/Section0001%20%28141%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28141%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28141%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28141%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (142).html with path: Text/Section0001%20%28142%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28142%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28142%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28142%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (143).html with path: Text/Section0001%20%28143%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28143%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28143%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28143%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (144).html with path: Text/Section0001%20%28144%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28144%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28144%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28144%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (145).html with path: Text/Section0001%20%28145%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28145%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28145%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28145%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (146).html with path: Text/Section0001%20%28146%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28146%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28146%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28146%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (147).html with path: Text/Section0001%20%28147%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28147%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28147%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28147%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (148).html with path: Text/Section0001%20%28148%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28148%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28148%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28148%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (149).html with path: Text/Section0001%20%28149%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28149%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28149%29.html
+ File not found: OEBPS/Text/Section0001%20%28149%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (150).html with path: Text/Section0001%20%28150%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28150%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28150%29.html
+ File not found: OEBPS/Text/Section0001%20%28150%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (151).html with path: Text/Section0001%20%28151%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28151%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28151%29.html
+ File not found: OEBPS/Text/Section0001%20%28151%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (152).html with path: Text/Section0001%20%28152%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28152%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28152%29.html
+ File not found: OEBPS/Text/Section0001%20%28152%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (153).html with path: Text/Section0001%20%28153%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28153%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28153%29.html
+ File not found: OEBPS/Text/Section0001%20%28153%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (154).html with path: Text/Section0001%20%28154%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28154%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28154%29.html
+ File not found: OEBPS/Text/Section0001%20%28154%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (155).html with path: Text/Section0001%20%28155%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28155%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28155%29.html
+ File not found: OEBPS/Text/Section0001%20%28155%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (156).html with path: Text/Section0001%20%28156%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28156%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28156%29.html
+ File not found: OEBPS/Text/Section0001%20%28156%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (157).html with path: Text/Section0001%20%28157%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28157%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28157%29.html
+ File not found: OEBPS/Text/Section0001%20%28157%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (158).html with path: Text/Section0001%20%28158%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28158%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28158%29.html
+ File not found: OEBPS/Text/Section0001%20%28158%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (159).html with path: Text/Section0001%20%28159%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28159%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28159%29.html
+ File not found: OEBPS/Text/Section0001%20%28159%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (160).html with path: Text/Section0001%20%28160%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28160%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28160%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28160%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (161).html with path: Text/Section0001%20%28161%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28161%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28161%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28161%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (162).html with path: Text/Section0001%20%28162%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28162%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28162%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28162%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (163).html with path: Text/Section0001%20%28163%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28163%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28163%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28163%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (164).html with path: Text/Section0001%20%28164%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28164%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28164%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28164%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (165).html with path: Text/Section0001%20%28165%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28165%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28165%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28165%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (166).html with path: Text/Section0001%20%28166%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28166%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28166%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28166%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (167).html with path: Text/Section0001%20%28167%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28167%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28167%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28167%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (168).html with path: Text/Section0001%20%28168%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28168%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28168%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28168%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (169).html with path: Text/Section0001%20%28169%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28169%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28169%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28169%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (170).html with path: Text/Section0001%20%28170%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28170%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28170%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28170%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (171).html with path: Text/Section0001%20%28171%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28171%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28171%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28171%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (172).html with path: Text/Section0001%20%28172%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28172%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28172%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28172%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (173).html with path: Text/Section0001%20%28173%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28173%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28173%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28173%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (174).html with path: Text/Section0001%20%28174%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28174%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28174%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28174%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (175).html with path: Text/Section0001%20%28175%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28175%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28175%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28175%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (176).html with path: Text/Section0001%20%28176%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28176%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28176%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28176%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (177).html with path: Text/Section0001%20%28177%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28177%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28177%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28177%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (178).html with path: Text/Section0001%20%28178%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28178%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28178%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28178%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (179).html with path: Text/Section0001%20%28179%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28179%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28179%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28179%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (180).html with path: Text/Section0001%20%28180%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28180%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28180%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28180%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (181).html with path: Text/Section0001%20%28181%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28181%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28181%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28181%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (182).html with path: Text/Section0001%20%28182%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28182%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28182%29.html
+ File not found: OEBPS/Text/Section0001%20%28182%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (183).html with path: Text/Section0001%20%28183%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28183%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28183%29.html
+ File not found: OEBPS/Text/Section0001%20%28183%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (184).html with path: Text/Section0001%20%28184%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28184%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28184%29.html
+ File not found: OEBPS/Text/Section0001%20%28184%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (185).html with path: Text/Section0001%20%28185%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28185%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28185%29.html
+ File not found: OEBPS/Text/Section0001%20%28185%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (186).html with path: Text/Section0001%20%28186%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28186%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28186%29.html
+ File not found: OEBPS/Text/Section0001%20%28186%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (187).html with path: Text/Section0001%20%28187%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28187%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28187%29.html
+ File not found: OEBPS/Text/Section0001%20%28187%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (188).html with path: Text/Section0001%20%28188%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28188%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28188%29.html
+ File not found: OEBPS/Text/Section0001%20%28188%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (189).html with path: Text/Section0001%20%28189%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28189%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28189%29.html
+ File not found: OEBPS/Text/Section0001%20%28189%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (190).html with path: Text/Section0001%20%28190%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28190%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28190%29.html
+ File not found: OEBPS/Text/Section0001%20%28190%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (191).html with path: Text/Section0001%20%28191%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28191%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28191%29.html
+ File not found: OEBPS/Text/Section0001%20%28191%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (192).html with path: Text/Section0001%20%28192%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28192%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28192%29.html
+ File not found: OEBPS/Text/Section0001%20%28192%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (193).html with path: Text/Section0001%20%28193%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28193%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28193%29.html
+ File not found: OEBPS/Text/Section0001%20%28193%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (194).html with path: Text/Section0001%20%28194%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28194%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28194%29.html
+ File not found: OEBPS/Text/Section0001%20%28194%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (195).html with path: Text/Section0001%20%28195%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28195%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28195%29.html
+ File not found: OEBPS/Text/Section0001%20%28195%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (196).html with path: Text/Section0001%20%28196%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28196%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28196%29.html
+ File not found: OEBPS/Text/Section0001%20%28196%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (197).html with path: Text/Section0001%20%28197%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28197%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28197%29.html
+ File not found: OEBPS/Text/Section0001%20%28197%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (198).html with path: Text/Section0001%20%28198%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28198%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28198%29.html
+ File not found: OEBPS/Text/Section0001%20%28198%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (199).html with path: Text/Section0001%20%28199%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28199%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28199%29.html
+ File not found: OEBPS/Text/Section0001%20%28199%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (200).html with path: Text/Section0001%20%28200%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28200%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28200%29.html
+ File not found: OEBPS/Text/Section0001%20%28200%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (201).html with path: Text/Section0001%20%28201%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28201%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28201%29.html
+ File not found: OEBPS/Text/Section0001%20%28201%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (202).html with path: Text/Section0001%20%28202%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28202%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28202%29.html
+ File not found: OEBPS/Text/Section0001%20%28202%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (203).html with path: Text/Section0001%20%28203%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28203%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28203%29.html
+ File not found: OEBPS/Text/Section0001%20%28203%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (204).html with path: Text/Section0001%20%28204%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28204%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28204%29.html
+ File not found: OEBPS/Text/Section0001%20%28204%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (205).html with path: Text/Section0001%20%28205%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28205%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28205%29.html
+ File not found: OEBPS/Text/Section0001%20%28205%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (206).html with path: Text/Section0001%20%28206%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28206%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28206%29.html
+ File not found: OEBPS/Text/Section0001%20%28206%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (207).html with path: Text/Section0001%20%28207%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28207%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28207%29.html
+ File not found: OEBPS/Text/Section0001%20%28207%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (208).html with path: Text/Section0001%20%28208%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28208%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28208%29.html
+ File not found: OEBPS/Text/Section0001%20%28208%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (209).html with path: Text/Section0001%20%28209%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28209%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28209%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28209%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (210).html with path: Text/Section0001%20%28210%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28210%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28210%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28210%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (211).html with path: Text/Section0001%20%28211%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28211%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28211%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28211%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (212).html with path: Text/Section0001%20%28212%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28212%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28212%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28212%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (213).html with path: Text/Section0001%20%28213%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28213%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28213%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28213%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (214).html with path: Text/Section0001%20%28214%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28214%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28214%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28214%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (215).html with path: Text/Section0001%20%28215%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28215%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28215%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28215%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (216).html with path: Text/Section0001%20%28216%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28216%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28216%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28216%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (217).html with path: Text/Section0001%20%28217%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28217%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28217%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28217%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (218).html with path: Text/Section0001%20%28218%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28218%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28218%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28218%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (219).html with path: Text/Section0001%20%28219%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28219%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28219%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28219%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (220).html with path: Text/Section0001%20%28220%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28220%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28220%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28220%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (221).html with path: Text/Section0001%20%28221%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28221%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28221%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28221%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (222).html with path: Text/Section0001%20%28222%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28222%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28222%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28222%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (223).html with path: Text/Section0001%20%28223%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28223%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28223%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28223%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (224).html with path: Text/Section0001%20%28224%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28224%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28224%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28224%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (225).html with path: Text/Section0001%20%28225%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28225%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28225%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28225%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (226).html with path: Text/Section0001%20%28226%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28226%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28226%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28226%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (227).html with path: Text/Section0001%20%28227%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28227%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28227%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28227%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (228).html with path: Text/Section0001%20%28228%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28228%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28228%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28228%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (229).html with path: Text/Section0001%20%28229%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28229%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28229%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28229%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (230).html with path: Text/Section0001%20%28230%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28230%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28230%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28230%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (231).html with path: Text/Section0001%20%28231%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28231%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28231%29.html
+ File not found: OEBPS/Text/Section0001%20%28231%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (232).html with path: Text/Section0001%20%28232%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28232%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28232%29.html
+ File not found: OEBPS/Text/Section0001%20%28232%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (233).html with path: Text/Section0001%20%28233%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28233%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28233%29.html
+ File not found: OEBPS/Text/Section0001%20%28233%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (234).html with path: Text/Section0001%20%28234%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28234%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28234%29.html
+ File not found: OEBPS/Text/Section0001%20%28234%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (235).html with path: Text/Section0001%20%28235%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28235%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28235%29.html
+ File not found: OEBPS/Text/Section0001%20%28235%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (236).html with path: Text/Section0001%20%28236%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28236%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28236%29.html
+ File not found: OEBPS/Text/Section0001%20%28236%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (237).html with path: Text/Section0001%20%28237%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28237%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28237%29.html
+ File not found: OEBPS/Text/Section0001%20%28237%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (238).html with path: Text/Section0001%20%28238%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28238%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28238%29.html
+ File not found: OEBPS/Text/Section0001%20%28238%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (239).html with path: Text/Section0001%20%28239%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28239%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28239%29.html
+ File not found: OEBPS/Text/Section0001%20%28239%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (240).html with path: Text/Section0001%20%28240%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28240%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28240%29.html
+ File not found: OEBPS/Text/Section0001%20%28240%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (241).html with path: Text/Section0001%20%28241%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28241%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28241%29.html
+ File not found: OEBPS/Text/Section0001%20%28241%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (242).html with path: Text/Section0001%20%28242%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28242%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28242%29.html
+ File not found: OEBPS/Text/Section0001%20%28242%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (243).html with path: Text/Section0001%20%28243%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28243%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28243%29.html
+ File not found: OEBPS/Text/Section0001%20%28243%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (244).html with path: Text/Section0001%20%28244%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28244%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28244%29.html
+ File not found: OEBPS/Text/Section0001%20%28244%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (245).html with path: Text/Section0001%20%28245%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28245%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28245%29.html
+ File not found: OEBPS/Text/Section0001%20%28245%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (246).html with path: Text/Section0001%20%28246%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28246%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28246%29.html
+ File not found: OEBPS/Text/Section0001%20%28246%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (247).html with path: Text/Section0001%20%28247%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28247%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28247%29.html
+ File not found: OEBPS/Text/Section0001%20%28247%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (248).html with path: Text/Section0001%20%28248%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28248%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28248%29.html
+ File not found: OEBPS/Text/Section0001%20%28248%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (249).html with path: Text/Section0001%20%28249%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28249%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28249%29.html
+ File not found: OEBPS/Text/Section0001%20%28249%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (250).html with path: Text/Section0001%20%28250%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28250%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28250%29.html
+ File not found: OEBPS/Text/Section0001%20%28250%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (251).html with path: Text/Section0001%20%28251%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28251%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28251%29.html
+ File not found: OEBPS/Text/Section0001%20%28251%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (252).html with path: Text/Section0001%20%28252%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28252%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28252%29.html
+ File not found: OEBPS/Text/Section0001%20%28252%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (253).html with path: Text/Section0001%20%28253%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28253%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28253%29.html
+ File not found: OEBPS/Text/Section0001%20%28253%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (254).html with path: Text/Section0001%20%28254%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28254%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28254%29.html
+ File not found: OEBPS/Text/Section0001%20%28254%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (255).html with path: Text/Section0001%20%28255%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28255%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28255%29.html
+ File not found: OEBPS/Text/Section0001%20%28255%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (256).html with path: Text/Section0001%20%28256%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28256%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28256%29.html
+ File not found: OEBPS/Text/Section0001%20%28256%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (257).html with path: Text/Section0001%20%28257%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28257%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28257%29.html
+ File not found: OEBPS/Text/Section0001%20%28257%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (258).html with path: Text/Section0001%20%28258%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28258%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28258%29.html
+ File not found: OEBPS/Text/Section0001%20%28258%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (259).html with path: Text/Section0001%20%28259%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28259%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28259%29.html
+ File not found: OEBPS/Text/Section0001%20%28259%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (260).html with path: Text/Section0001%20%28260%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28260%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28260%29.html
+ File not found: OEBPS/Text/Section0001%20%28260%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (261).html with path: Text/Section0001%20%28261%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28261%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28261%29.html
+ File not found: OEBPS/Text/Section0001%20%28261%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (262).html with path: Text/Section0001%20%28262%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28262%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28262%29.html
+ File not found: OEBPS/Text/Section0001%20%28262%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (263).html with path: Text/Section0001%20%28263%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28263%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28263%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28263%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (264).html with path: Text/Section0001%20%28264%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28264%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28264%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28264%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (265).html with path: Text/Section0001%20%28265%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28265%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28265%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28265%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (266).html with path: Text/Section0001%20%28266%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28266%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28266%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28266%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (267).html with path: Text/Section0001%20%28267%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28267%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28267%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28267%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (268).html with path: Text/Section0001%20%28268%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28268%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28268%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28268%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (269).html with path: Text/Section0001%20%28269%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28269%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28269%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28269%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (270).html with path: Text/Section0001%20%28270%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28270%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28270%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28270%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (271).html with path: Text/Section0001%20%28271%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28271%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28271%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28271%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (272).html with path: Text/Section0001%20%28272%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28272%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28272%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28272%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (273).html with path: Text/Section0001%20%28273%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28273%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28273%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28273%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (274).html with path: Text/Section0001%20%28274%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28274%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28274%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28274%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (275).html with path: Text/Section0001%20%28275%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28275%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28275%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28275%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (276).html with path: Text/Section0001%20%28276%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28276%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28276%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28276%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (277).html with path: Text/Section0001%20%28277%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28277%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28277%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28277%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (278).html with path: Text/Section0001%20%28278%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28278%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28278%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28278%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (279).html with path: Text/Section0001%20%28279%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28279%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28279%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28279%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (280).html with path: Text/Section0001%20%28280%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28280%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28280%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28280%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (281).html with path: Text/Section0001%20%28281%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28281%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28281%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28281%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (282).html with path: Text/Section0001%20%28282%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28282%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28282%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28282%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (283).html with path: Text/Section0001%20%28283%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28283%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28283%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28283%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (284).html with path: Text/Section0001%20%28284%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28284%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28284%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28284%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (285).html with path: Text/Section0001%20%28285%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28285%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28285%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28285%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (286).html with path: Text/Section0001%20%28286%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28286%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28286%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28286%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (287).html with path: Text/Section0001%20%28287%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28287%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28287%29.html
+ File not found: OEBPS/Text/Section0001%20%28287%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (288).html with path: Text/Section0001%20%28288%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28288%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28288%29.html
+ File not found: OEBPS/Text/Section0001%20%28288%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (289).html with path: Text/Section0001%20%28289%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28289%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28289%29.html
+ File not found: OEBPS/Text/Section0001%20%28289%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (290).html with path: Text/Section0001%20%28290%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28290%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28290%29.html
+ File not found: OEBPS/Text/Section0001%20%28290%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (291).html with path: Text/Section0001%20%28291%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28291%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28291%29.html
+ File not found: OEBPS/Text/Section0001%20%28291%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (292).html with path: Text/Section0001%20%28292%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28292%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28292%29.html
+ File not found: OEBPS/Text/Section0001%20%28292%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (293).html with path: Text/Section0001%20%28293%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28293%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28293%29.html
+ File not found: OEBPS/Text/Section0001%20%28293%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (294).html with path: Text/Section0001%20%28294%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28294%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28294%29.html
+ File not found: OEBPS/Text/Section0001%20%28294%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (295).html with path: Text/Section0001%20%28295%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28295%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28295%29.html
+ File not found: OEBPS/Text/Section0001%20%28295%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (296).html with path: Text/Section0001%20%28296%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28296%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28296%29.html
+ File not found: OEBPS/Text/Section0001%20%28296%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (297).html with path: Text/Section0001%20%28297%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28297%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28297%29.html
+ File not found: OEBPS/Text/Section0001%20%28297%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (298).html with path: Text/Section0001%20%28298%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28298%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28298%29.html
+ File not found: OEBPS/Text/Section0001%20%28298%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (299).html with path: Text/Section0001%20%28299%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28299%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28299%29.html
+ File not found: OEBPS/Text/Section0001%20%28299%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (300).html with path: Text/Section0001%20%28300%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28300%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28300%29.html
+ File not found: OEBPS/Text/Section0001%20%28300%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (301).html with path: Text/Section0001%20%28301%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28301%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28301%29.html
+ File not found: OEBPS/Text/Section0001%20%28301%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (302).html with path: Text/Section0001%20%28302%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28302%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28302%29.html
+ File not found: OEBPS/Text/Section0001%20%28302%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (303).html with path: Text/Section0001%20%28303%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28303%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28303%29.html
+ File not found: OEBPS/Text/Section0001%20%28303%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (304).html with path: Text/Section0001%20%28304%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28304%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28304%29.html
+ File not found: OEBPS/Text/Section0001%20%28304%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (305).html with path: Text/Section0001%20%28305%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28305%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28305%29.html
+ File not found: OEBPS/Text/Section0001%20%28305%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (306).html with path: Text/Section0001%20%28306%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28306%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28306%29.html
+ File not found: OEBPS/Text/Section0001%20%28306%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (307).html with path: Text/Section0001%20%28307%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28307%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28307%29.html
+ File not found: OEBPS/Text/Section0001%20%28307%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (308).html with path: Text/Section0001%20%28308%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28308%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28308%29.html
+ File not found: OEBPS/Text/Section0001%20%28308%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (309).html with path: Text/Section0001%20%28309%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28309%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28309%29.html
+ File not found: OEBPS/Text/Section0001%20%28309%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (310).html with path: Text/Section0001%20%28310%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28310%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28310%29.html
+ File not found: OEBPS/Text/Section0001%20%28310%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (311).html with path: Text/Section0001%20%28311%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28311%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28311%29.html
+ File not found: OEBPS/Text/Section0001%20%28311%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (312).html with path: Text/Section0001%20%28312%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28312%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28312%29.html
+ File not found: OEBPS/Text/Section0001%20%28312%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (313).html with path: Text/Section0001%20%28313%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28313%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28313%29.html
+ File not found: OEBPS/Text/Section0001%20%28313%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (314).html with path: Text/Section0001%20%28314%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28314%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28314%29.html
+ File not found: OEBPS/Text/Section0001%20%28314%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (315).html with path: Text/Section0001%20%28315%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28315%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28315%29.html
+ File not found: OEBPS/Text/Section0001%20%28315%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (316).html with path: Text/Section0001%20%28316%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28316%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28316%29.html
+ File not found: OEBPS/Text/Section0001%20%28316%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (317).html with path: Text/Section0001%20%28317%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28317%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28317%29.html
+ File not found: OEBPS/Text/Section0001%20%28317%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (318).html with path: Text/Section0001%20%28318%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28318%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28318%29.html
+ File not found: OEBPS/Text/Section0001%20%28318%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (319).html with path: Text/Section0001%20%28319%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28319%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28319%29.html
+ File not found: OEBPS/Text/Section0001%20%28319%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (320).html with path: Text/Section0001%20%28320%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28320%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28320%29.html
+ File not found: OEBPS/Text/Section0001%20%28320%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (321).html with path: Text/Section0001%20%28321%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28321%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28321%29.html
+ File not found: OEBPS/Text/Section0001%20%28321%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (322).html with path: Text/Section0001%20%28322%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28322%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28322%29.html
+ File not found: OEBPS/Text/Section0001%20%28322%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (323).html with path: Text/Section0001%20%28323%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28323%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28323%29.html
+ File not found: OEBPS/Text/Section0001%20%28323%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (324).html with path: Text/Section0001%20%28324%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28324%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28324%29.html
+ File not found: OEBPS/Text/Section0001%20%28324%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (325).html with path: Text/Section0001%20%28325%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28325%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28325%29.html
+ File not found: OEBPS/Text/Section0001%20%28325%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (326).html with path: Text/Section0001%20%28326%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28326%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28326%29.html
+ File not found: OEBPS/Text/Section0001%20%28326%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (327).html with path: Text/Section0001%20%28327%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28327%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28327%29.html
+ File not found: OEBPS/Text/Section0001%20%28327%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (328).html with path: Text/Section0001%20%28328%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28328%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28328%29.html
+ File not found: OEBPS/Text/Section0001%20%28328%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (329).html with path: Text/Section0001%20%28329%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28329%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28329%29.html
+ File not found: OEBPS/Text/Section0001%20%28329%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (330).html with path: Text/Section0001%20%28330%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28330%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28330%29.html
+ File not found: OEBPS/Text/Section0001%20%28330%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (331).html with path: Text/Section0001%20%28331%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28331%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28331%29.html
+ File not found: OEBPS/Text/Section0001%20%28331%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (332).html with path: Text/Section0001%20%28332%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28332%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28332%29.html
+ File not found: OEBPS/Text/Section0001%20%28332%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (333).html with path: Text/Section0001%20%28333%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28333%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28333%29.html
+ File not found: OEBPS/Text/Section0001%20%28333%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (334).html with path: Text/Section0001%20%28334%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28334%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28334%29.html
+ File not found: OEBPS/Text/Section0001%20%28334%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (335).html with path: Text/Section0001%20%28335%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28335%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28335%29.html
+ File not found: OEBPS/Text/Section0001%20%28335%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (336).html with path: Text/Section0001%20%28336%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28336%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28336%29.html
+ File not found: OEBPS/Text/Section0001%20%28336%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (337).html with path: Text/Section0001%20%28337%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28337%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28337%29.html
+ File not found: OEBPS/Text/Section0001%20%28337%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (338).html with path: Text/Section0001%20%28338%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28338%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28338%29.html
+ File not found: OEBPS/Text/Section0001%20%28338%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (339).html with path: Text/Section0001%20%28339%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28339%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28339%29.html
+ File not found: OEBPS/Text/Section0001%20%28339%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (340).html with path: Text/Section0001%20%28340%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28340%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28340%29.html
+ File not found: OEBPS/Text/Section0001%20%28340%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (341).html with path: Text/Section0001%20%28341%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28341%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28341%29.html
+ File not found: OEBPS/Text/Section0001%20%28341%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (342).html with path: Text/Section0001%20%28342%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28342%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28342%29.html
+ File not found: OEBPS/Text/Section0001%20%28342%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (343).html with path: Text/Section0001%20%28343%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28343%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28343%29.html
+ File not found: OEBPS/Text/Section0001%20%28343%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (344).html with path: Text/Section0001%20%28344%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28344%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28344%29.html
+ File not found: OEBPS/Text/Section0001%20%28344%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (345).html with path: Text/Section0001%20%28345%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28345%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28345%29.html
+ File not found: OEBPS/Text/Section0001%20%28345%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (346).html with path: Text/Section0001%20%28346%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28346%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28346%29.html
+ File not found: OEBPS/Text/Section0001%20%28346%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (347).html with path: Text/Section0001%20%28347%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28347%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28347%29.html
+ File not found: OEBPS/Text/Section0001%20%28347%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (348).html with path: Text/Section0001%20%28348%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28348%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28348%29.html
+ File not found: OEBPS/Text/Section0001%20%28348%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (349).html with path: Text/Section0001%20%28349%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28349%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28349%29.html
+ File not found: OEBPS/Text/Section0001%20%28349%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (350).html with path: Text/Section0001%20%28350%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28350%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28350%29.html
+ File not found: OEBPS/Text/Section0001%20%28350%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (351).html with path: Text/Section0001%20%28351%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28351%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28351%29.html
+ File not found: OEBPS/Text/Section0001%20%28351%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+ Processing spine item: Text/Section0001 (352).html with path: Text/Section0001%20%28352%29.html
+ Attempting to process: OEBPS/Text/Section0001%20%28352%29.html
+ Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28352%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28352%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (353).html with path: Text/Section0001%20%28353%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28353%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28353%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28353%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (354).html with path: Text/Section0001%20%28354%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28354%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28354%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28354%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (355).html with path: Text/Section0001%20%28355%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28355%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28355%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28355%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (356).html with path: Text/Section0001%20%28356%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28356%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28356%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28356%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (357).html with path: Text/Section0001%20%28357%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28357%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28357%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28357%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (358).html with path: Text/Section0001%20%28358%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28358%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28358%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28358%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (359).html with path: Text/Section0001%20%28359%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28359%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28359%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28359%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (360).html with path: Text/Section0001%20%28360%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28360%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28360%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28360%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (361).html with path: Text/Section0001%20%28361%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28361%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28361%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28361%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (362).html with path: Text/Section0001%20%28362%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28362%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28362%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28362%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (363).html with path: Text/Section0001%20%28363%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28363%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28363%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28363%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (364).html with path: Text/Section0001%20%28364%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28364%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28364%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28364%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (365).html with path: Text/Section0001%20%28365%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28365%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28365%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28365%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (366).html with path: Text/Section0001%20%28366%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28366%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28366%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28366%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (367).html with path: Text/Section0001%20%28367%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28367%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28367%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28367%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (368).html with path: Text/Section0001%20%28368%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28368%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28368%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28368%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (369).html with path: Text/Section0001%20%28369%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28369%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28369%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28369%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (370).html with path: Text/Section0001%20%28370%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28370%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28370%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28370%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (371).html with path: Text/Section0001%20%28371%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28371%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28371%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28371%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (372).html with path: Text/Section0001%20%28372%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28372%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28372%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28372%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (373).html with path: Text/Section0001%20%28373%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28373%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28373%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28373%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (374).html with path: Text/Section0001%20%28374%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28374%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28374%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28374%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (375).html with path: Text/Section0001%20%28375%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28375%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28375%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28375%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (376).html with path: Text/Section0001%20%28376%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28376%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28376%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28376%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (377).html with path: Text/Section0001%20%28377%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28377%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28377%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28377%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (378).html with path: Text/Section0001%20%28378%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28378%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28378%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28378%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (379).html with path: Text/Section0001%20%28379%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28379%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28379%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28379%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (380).html with path: Text/Section0001%20%28380%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28380%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28380%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28380%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (381).html with path: Text/Section0001%20%28381%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28381%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28381%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28381%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (382).html with path: Text/Section0001%20%28382%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28382%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28382%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28382%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (383).html with path: Text/Section0001%20%28383%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28383%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28383%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28383%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (384).html with path: Text/Section0001%20%28384%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28384%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28384%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28384%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (385).html with path: Text/Section0001%20%28385%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28385%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28385%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28385%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (386).html with path: Text/Section0001%20%28386%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28386%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28386%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28386%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (387).html with path: Text/Section0001%20%28387%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28387%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28387%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28387%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (388).html with path: Text/Section0001%20%28388%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28388%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28388%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28388%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (389).html with path: Text/Section0001%20%28389%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28389%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28389%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28389%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (390).html with path: Text/Section0001%20%28390%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28390%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28390%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28390%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (391).html with path: Text/Section0001%20%28391%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28391%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28391%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28391%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: Text/Section0001 (392).html with path: Text/Section0001%20%28392%29.html
+converter.js:151 Attempting to process: OEBPS/Text/Section0001%20%28392%29.html
+converter.js:159 Trying alternate path: OEBPS/OEBPS/Text/Section0001%20%28392%29.html
+converter.js:163 File not found: OEBPS/Text/Section0001%20%28392%29.html
+convertEpub @ converter.js:163
+await in convertEpub
+(anonymous) @ converter.js:63
+(anonymous) @ converter.js:61
+converter.js:147 Processing spine item: nav.xhtml with path: Text/nav.xhtml
+converter.js:151 Attempting to process: OEBPS/Text/nav.xhtml
+converter.js:170 Content found for: OEBPS/Text/nav.xhtml

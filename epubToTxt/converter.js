@@ -150,13 +150,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 const fullPath = (baseDir + relativePath).replace(/\\/g, '/');
                 console.log('Attempting to process:', fullPath);
                 
-                // Try both the direct path and with OEBPS prefix
+                // Try multiple path variants
                 let file = zip.file(fullPath);
                 if (!file) {
-                    // Try with OEBPS prefix if not found
+                    // Try with OEBPS prefix
                     const oebpsPath = 'OEBPS/' + fullPath;
                     file = zip.file(oebpsPath);
                     console.log('Trying alternate path:', oebpsPath);
+                }
+
+                // Try with the actual space and parentheses if not found
+                if (!file) {
+                    const decodedPath = decodeURIComponent(fullPath);
+                    file = zip.file(decodedPath);
+                    console.log('Trying decoded path:', decodedPath);
+                    
+                    if (!file) {
+                        const oebpsDecodedPath = 'OEBPS/' + decodedPath;
+                        file = zip.file(oebpsDecodedPath);
+                        console.log('Trying decoded path with OEBPS:', oebpsDecodedPath);
+                    }
                 }
 
                 if (!file) {
@@ -165,6 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const content = await file.async('text');
+    
                 if (content) {
                     console.log('Content found for:', fullPath);
                     const textOnly = content
@@ -172,16 +186,20 @@ document.addEventListener('DOMContentLoaded', () => {
                         .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
                         .replace(/<[^>]+>/g, '')
                         .replace(/&nbsp;/g, ' ')
+                        .replace(/&#160;/g, ' ')         // Remove non-breaking space HTML entity
+                        .replace(/&\w+;/g, ' ')          // Remove other HTML entities
+                        .replace(/&#\d+;/g, ' ')         // Remove numeric HTML entities
                         .replace(/Section\d+\.html/gi, '') // Remove section file names
                         .replace(/Chapter\s*\d+/gi, '')    // Remove chapter headers
                         .replace(/Section\s*\d+/gi, '')    // Remove section headers
-                        .replace(/\s+/g, ' ')
+                        .replace(/\s+/g, ' ')             // Normalize whitespace
                         .trim();
                     
                     if (textOnly) {
                         textContent += textOnly + '\n\n';
                     }
                 }
+                
             }
         }
 
