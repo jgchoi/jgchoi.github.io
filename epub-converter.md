@@ -250,6 +250,47 @@ document.addEventListener('DOMContentLoaded', () => {
         debugLog.scrollTop = debugLog.scrollHeight;
     }
 
+    function detectAndRemoveWatermark(text) {
+        // Split text into lines
+        const lines = text.split('\n').map(line => line.trim()).filter(line => line);
+        
+        if (lines.length < 2) return text;
+        
+        // Find the most common prefix in the first few lines
+        const firstLines = lines.slice(0, 5); // Look at first 5 lines
+        const prefixes = new Map();
+        
+        // Try different prefix lengths (from 5 to 50 characters)
+        for (let length = 5; length <= 50; length++) {
+            firstLines.forEach(line => {
+                if (line.length >= length) {
+                    const prefix = line.substring(0, length);
+                    prefixes.set(prefix, (prefixes.get(prefix) || 0) + 1);
+                }
+            });
+        }
+        
+        // Find the most common prefix that appears at least twice
+        let bestPrefix = '';
+        let maxCount = 0;
+        
+        prefixes.forEach((count, prefix) => {
+            if (count > maxCount && count >= 2) {
+                maxCount = count;
+                bestPrefix = prefix;
+            }
+        });
+        
+        if (bestPrefix) {
+            log(`Detected watermark prefix: "${bestPrefix}" (appears ${maxCount} times)`);
+            // Remove the prefix from all lines
+            return lines.map(line => line.startsWith(bestPrefix) ? line.substring(bestPrefix.length).trim() : line)
+                       .join('\n');
+        }
+        
+        return text;
+    }
+
     async function convertEpub(file) {
         log(`Starting conversion of file: ${file.name}`);
         const zipData = await file.arrayBuffer();
@@ -359,14 +400,18 @@ document.addEventListener('DOMContentLoaded', () => {
                         .replace(/Section\d+\.html/gi, '')
                         .replace(/Chapter\s*\d+/gi, '')
                         .replace(/Section\s*\d+/gi, '')
+                        .replace(/Booktopia\s+Epub\s*/gi, '')
                         .replace(/\s+/g, ' ')
                         .trim();
                     
-                    log(`Processed content from ${fullPath}:`);
-                    log(textOnly.substring(0, 500) + '...'); // Log first 500 chars
+                    // Apply watermark detection and removal
+                    const cleanedText = detectAndRemoveWatermark(textOnly);
                     
-                    if (textOnly) {
-                        textContent += textOnly + '\n\n';
+                    log(`Processed content from ${fullPath}:`);
+                    log(cleanedText.substring(0, 500) + '...'); // Log first 500 chars
+                    
+                    if (cleanedText) {
+                        textContent += cleanedText + '\n\n';
                     }
                 }
             }
