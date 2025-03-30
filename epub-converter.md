@@ -137,6 +137,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fileInput.setAttribute('multiple', 'true');
 
+    // Add click handler to open file selection dialog
+    dropZone.addEventListener('click', () => {
+        fileInput.click();
+    });
+
     dropZone.addEventListener('dragover', (e) => {
         e.preventDefault();
         dropZone.classList.add('dragover');
