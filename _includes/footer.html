@@ -1,0 +1,39 @@
+<footer class="site-footer">
+  <div class="wrapper">
+    <div class="footer-content">
+      <p class="copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}</p>
+      <p class="contact">
+        {%- if site.author.email -%}
+          <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
+        {%- endif -%}
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+.site-footer {
+  padding: 20px 0;
+  border-top: 1px solid #eaecef;
+  background-color: #f8f9fa;
+}
+
+.footer-content {
+  text-align: center;
+  color: #6a737d;
+  font-size: 14px;
+}
+
+.footer-content p {
+  margin: 5px 0;
+}
+
+.footer-content a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+</style> 

@@ -1,7 +1,7 @@
 title: My Personal Blog
 description: A personal blog about technology, life, and everything in between
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://jgchoi.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 markdown: kramdown
@@ -22,3 +22,15 @@ exclude:
 author:
   name: choij
   email: choij@gmail.com
+  bio: Write your bio here
+  location: Your Location
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/yourusername"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://linkedin.com/in/yourusername"
+
+# Social media
+github_username: yourusername
