@@ -20,6 +20,7 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
     </div>
     <button id="convertBtn" disabled>Convert Selected Files to TXT</button>
     <div id="output"></div>
+    <div id="debugLog" style="margin-top: 20px; text-align: left; background: #f5f5f5; padding: 10px; border-radius: 5px; max-height: 300px; overflow-y: auto;"></div>
 </div>
 
 <style>
@@ -122,6 +123,12 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
         cursor: not-allowed;
         box-shadow: none;
         opacity: 0.7;
+    }
+    #debugLog {
+        font-family: monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
     }
 </style>
 
@@ -236,24 +243,38 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    function log(message) {
+        const debugLog = document.getElementById('debugLog');
+        const timestamp = new Date().toLocaleTimeString();
+        debugLog.innerHTML += `[${timestamp}] ${message}\n`;
+        debugLog.scrollTop = debugLog.scrollHeight;
+    }
+
     async function convertEpub(file) {
+        log(`Starting conversion of file: ${file.name}`);
         const zipData = await file.arrayBuffer();
         const zip = await JSZip.loadAsync(zipData);
         let textContent = '';
 
         const files = Object.keys(zip.files);
+        log(`Total files in EPUB: ${files.length}`);
+        log(`Files found: ${files.join(', ')}`);
+
         const containerPath = files.find(path => path.toLowerCase() === 'meta-inf/container.xml');
         const containerFile = zip.file(containerPath);
         if (!containerFile) {
             throw new Error('Invalid EPUB: Missing container.xml');
         }
         const containerXml = await containerFile.async('text');
+        log('Container XML content:');
+        log(containerXml);
         
         const rootFileMatch = containerXml.match(/full-path=["']([^"']*?)["']/);
         if (!rootFileMatch) {
             throw new Error('Cannot find content.opf path');
         }
         const rootFilePath = rootFileMatch[1];
+        log(`Root file path: ${rootFilePath}`);
         
         const normalizedRootPath = rootFilePath.replace(/\\/g, '/');
         const contentOpfFile = zip.file(normalizedRootPath);
@@ -261,6 +282,8 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error(`Cannot find content.opf file at path: ${normalizedRootPath}`);
         }
         const contentOpf = await contentOpfFile.async('text');
+        log('Content OPF content:');
+        log(contentOpf);
 
         const spineMatch = contentOpf.match(/<spine[^>]*>([\s\S]*?)<\/spine>/);
         if (!spineMatch) {
@@ -269,6 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const spineItems = [...spineMatch[1].matchAll(/idref=["']([^"']+)["']/g)]
             .map(match => match[1]);
+        log(`Spine items found: ${spineItems.join(', ')}`);
 
         const manifestItems = {};
         const manifestMatches = contentOpf.match(/<item[^>]*?>/g) || [];
@@ -281,38 +305,47 @@ document.addEventListener('DOMContentLoaded', () => {
                 manifestItems[id] = href;
             }
         });
+        log('Manifest items:');
+        log(JSON.stringify(manifestItems, null, 2));
 
         const baseDir = rootFilePath.includes('/') 
             ? rootFilePath.substring(0, rootFilePath.lastIndexOf('/') + 1) 
             : '';
+        log(`Base directory: ${baseDir}`);
 
         for (const itemId of spineItems) {
             const relativePath = manifestItems[itemId];
             if (relativePath) {
                 const fullPath = (baseDir + relativePath).replace(/\\/g, '/');
+                log(`Processing file: ${fullPath}`);
                 let file = zip.file(fullPath);
                 
                 if (!file) {
                     const oebpsPath = 'OEBPS/' + fullPath;
+                    log(`Trying alternate path: ${oebpsPath}`);
                     file = zip.file(oebpsPath);
                 }
 
                 if (!file) {
                     const decodedPath = decodeURIComponent(fullPath);
+                    log(`Trying decoded path: ${decodedPath}`);
                     file = zip.file(decodedPath);
                     
                     if (!file) {
                         const oebpsDecodedPath = 'OEBPS/' + decodedPath;
+                        log(`Trying decoded path with OEBPS: ${oebpsDecodedPath}`);
                         file = zip.file(oebpsDecodedPath);
                     }
                 }
 
                 if (!file) {
-                    console.warn('File not found:', fullPath);
+                    log(`Warning: File not found: ${fullPath}`);
                     continue;
                 }
 
                 const content = await file.async('text');
+                log(`Raw content from ${fullPath}:`);
+                log(content.substring(0, 500) + '...'); // Log first 500 chars
     
                 if (content) {
                     const textOnly = content
@@ -329,9 +362,11 @@ document.addEventListener('DOMContentLoaded', () => {
                         .replace(/\s+/g, ' ')
                         .trim();
                     
-                    if (textOnly) {
-                        textContent += textOnly + '\n\n';
-                    }
+                log(`Processed content from ${fullPath}:`);
+                log(textOnly.substring(0, 500) + '...'); // Log first 500 chars
+                
+                if (textOnly) {
+                    textContent += textOnly + '\n\n';
                 }
             }
         }
@@ -339,6 +374,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!textContent) {
             throw new Error('No text content found in EPUB');
         }
+
+        log('Final text content:');
+        log(textContent.substring(0, 1000) + '...'); // Log first 1000 chars
 
         const blob = new Blob([textContent], { type: 'text/plain' });
         const downloadLink = document.createElement('a');
