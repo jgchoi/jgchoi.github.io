@@ -20,12 +20,12 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
     </div>
     <button id="convertBtn" disabled>Convert Selected Files to TXT</button>
     <div id="output"></div>
-    <div class="debug-controls" style="margin-top: 20px; text-align: left;">
+    <div class="debug-controls">
         <label>
             <input type="checkbox" id="debugMode"> Enable Debug Mode
         </label>
     </div>
-    <div id="debugLog" style="margin-top: 20px; text-align: left; background: #f5f5f5; padding: 10px; border-radius: 5px; max-height: 300px; overflow-y: auto; display: none;"></div>
+    <div id="debugLog" style="display: none;"></div>
 </div>
 
 <style>
@@ -41,6 +41,7 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
         margin: 20px 0;
         border-radius: 5px;
         cursor: pointer;
+        background-color: #f8f9fa;
     }
     #dropZone.dragover {
         background-color: #e1e1e1;
@@ -58,6 +59,7 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
         padding: 10px;
         border: 1px solid #eee;
         border-radius: 5px;
+        background-color: #fff;
     }
     .file-item {
         display: flex;
@@ -65,7 +67,7 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
         align-items: center;
         padding: 8px;
         border-bottom: 1px solid #eee;
-        background-color: #f9f9f9;
+        background-color: #f8f9fa;
         margin-bottom: 4px;
         border-radius: 4px;
     }
@@ -129,27 +131,37 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
         box-shadow: none;
         opacity: 0.7;
     }
-    #debugLog {
-        font-family: monospace;
-        font-size: 12px;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-    }
     .debug-controls {
         margin: 10px 0;
         padding: 10px;
-        background: #f5f5f5;
+        background: #f8f9fa;
         border-radius: 5px;
+        text-align: left;
     }
     .debug-controls label {
         display: flex;
         align-items: center;
         gap: 8px;
         cursor: pointer;
+        color: #666;
     }
     .debug-controls input[type="checkbox"] {
         width: 16px;
         height: 16px;
+    }
+    #debugLog {
+        margin-top: 20px;
+        text-align: left;
+        background: #f8f9fa;
+        padding: 10px;
+        border-radius: 5px;
+        max-height: 300px;
+        overflow-y: auto;
+        font-family: monospace;
+        font-size: 12px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        border: 1px solid #eee;
     }
 </style>
 
