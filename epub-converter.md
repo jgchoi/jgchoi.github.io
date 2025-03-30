@@ -20,7 +20,12 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
     </div>
     <button id="convertBtn" disabled>Convert Selected Files to TXT</button>
     <div id="output"></div>
-    <div id="debugLog" style="margin-top: 20px; text-align: left; background: #f5f5f5; padding: 10px; border-radius: 5px; max-height: 300px; overflow-y: auto;"></div>
+    <div class="debug-controls" style="margin-top: 20px; text-align: left;">
+        <label>
+            <input type="checkbox" id="debugMode"> Enable Debug Mode
+        </label>
+    </div>
+    <div id="debugLog" style="margin-top: 20px; text-align: left; background: #f5f5f5; padding: 10px; border-radius: 5px; max-height: 300px; overflow-y: auto; display: none;"></div>
 </div>
 
 <style>
@@ -130,6 +135,22 @@ Convert your EPUB files to plain text format easily. Just drop your EPUB files b
         white-space: pre-wrap;
         word-wrap: break-word;
     }
+    .debug-controls {
+        margin: 10px 0;
+        padding: 10px;
+        background: #f5f5f5;
+        border-radius: 5px;
+    }
+    .debug-controls label {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+    .debug-controls input[type="checkbox"] {
+        width: 16px;
+        height: 16px;
+    }
 </style>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -140,6 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const convertBtn = document.getElementById('convertBtn');
     const output = document.getElementById('output');
     const fileList = document.getElementById('fileList');
+    const debugMode = document.getElementById('debugMode');
+    const debugLog = document.getElementById('debugLog');
     let selectedFiles = [];
 
     fileInput.setAttribute('multiple', 'true');
@@ -243,10 +266,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    function log(message) {
-        const debugLog = document.getElementById('debugLog');
+    // Debug mode toggle handler
+    debugMode.addEventListener('change', (e) => {
+        debugLog.style.display = e.target.checked ? 'block' : 'none';
+    });
+
+    function log(message, isError = false) {
+        if (!debugMode.checked) return;
+        
         const timestamp = new Date().toLocaleTimeString();
-        debugLog.innerHTML += `[${timestamp}] ${message}\n`;
+        const logMessage = `[${timestamp}] ${message}`;
+        
+        if (isError) {
+            console.error(logMessage);
+        } else {
+            console.log(logMessage);
+        }
+        
+        debugLog.innerHTML += logMessage + '\n';
         debugLog.scrollTop = debugLog.scrollHeight;
     }
 
@@ -299,7 +336,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const files = Object.keys(zip.files);
         log(`Total files in EPUB: ${files.length}`);
-        log(`Files found: ${files.join(', ')}`);
+        if (debugMode.checked) {
+            log(`Files found: ${files.join(', ')}`);
+        }
 
         const containerPath = files.find(path => path.toLowerCase() === 'meta-inf/container.xml');
         const containerFile = zip.file(containerPath);
@@ -307,8 +346,10 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error('Invalid EPUB: Missing container.xml');
         }
         const containerXml = await containerFile.async('text');
-        log('Container XML content:');
-        log(containerXml);
+        if (debugMode.checked) {
+            log('Container XML content:');
+            log(containerXml.substring(0, 200) + '...');
+        }
         
         const rootFileMatch = containerXml.match(/full-path=["']([^"']*?)["']/);
         if (!rootFileMatch) {
@@ -323,8 +364,10 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error(`Cannot find content.opf file at path: ${normalizedRootPath}`);
         }
         const contentOpf = await contentOpfFile.async('text');
-        log('Content OPF content:');
-        log(contentOpf);
+        if (debugMode.checked) {
+            log('Content OPF content:');
+            log(contentOpf.substring(0, 200) + '...');
+        }
 
         const spineMatch = contentOpf.match(/<spine[^>]*>([\s\S]*?)<\/spine>/);
         if (!spineMatch) {
@@ -346,8 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 manifestItems[id] = href;
             }
         });
-        log('Manifest items:');
-        log(JSON.stringify(manifestItems, null, 2));
+        if (debugMode.checked) {
+            log('Manifest items:');
+            log(JSON.stringify(manifestItems, null, 2));
+        }
 
         const baseDir = rootFilePath.includes('/') 
             ? rootFilePath.substring(0, rootFilePath.lastIndexOf('/') + 1) 
@@ -385,8 +430,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
                 const content = await file.async('text');
-                log(`Raw content from ${fullPath}:`);
-                log(content.substring(0, 500) + '...'); // Log first 500 chars
+                if (debugMode.checked) {
+                    log(`Raw content from ${fullPath}:`);
+                    log(content.substring(0, 200) + '...');
+                }
     
                 if (content) {
                     const textOnly = content
@@ -404,11 +451,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         .replace(/\s+/g, ' ')
                         .trim();
                     
-                    // Apply watermark detection and removal
                     const cleanedText = detectAndRemoveWatermark(textOnly);
                     
-                    log(`Processed content from ${fullPath}:`);
-                    log(cleanedText.substring(0, 500) + '...'); // Log first 500 chars
+                    if (debugMode.checked) {
+                        log(`Processed content from ${fullPath}:`);
+                        log(cleanedText.substring(0, 200) + '...');
+                    }
                     
                     if (cleanedText) {
                         textContent += cleanedText + '\n\n';
@@ -421,8 +469,10 @@ document.addEventListener('DOMContentLoaded', () => {
             throw new Error('No text content found in EPUB');
         }
 
-        log('Final text content:');
-        log(textContent.substring(0, 1000) + '...'); // Log first 1000 chars
+        if (debugMode.checked) {
+            log('Final text content:');
+            log(textContent.substring(0, 500) + '...');
+        }
 
         const blob = new Blob([textContent], { type: 'text/plain' });
         const downloadLink = document.createElement('a');
