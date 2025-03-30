@@ -362,11 +362,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         .replace(/\s+/g, ' ')
                         .trim();
                     
-                log(`Processed content from ${fullPath}:`);
-                log(textOnly.substring(0, 500) + '...'); // Log first 500 chars
-                
-                if (textOnly) {
-                    textContent += textOnly + '\n\n';
+                    log(`Processed content from ${fullPath}:`);
+                    log(textOnly.substring(0, 500) + '...'); // Log first 500 chars
+                    
+                    if (textOnly) {
+                        textContent += textOnly + '\n\n';
+                    }
                 }
             }
         }
