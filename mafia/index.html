@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MAFIA NIGHT - 모바일 사회자 웹앱</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Mobile-first App Container -->
+    <div id="app-container">
+        
+        <!-- Header (Only visible on setup/gameover screen to save space) -->
+        <header id="app-header">
+            <div class="brand">
+                <i data-lucide="skull" class="brand-icon"></i>
+                <div class="brand-text">
+                    <h1>MAFIA NIGHT</h1>
+                </div>
+            </div>
+            <button id="btn-reset-game" class="header-action-btn" title="설정">
+                <i data-lucide="settings"></i>
+            </button>
+        </header>
+
+        <!-- Subtitle panel for TTS text (Acts as subtitle overlay) -->
+        <div id="tts-subtitle-container">
+            <div id="tts-subtitle">화면 하단의 지시에 따라주세요.</div>
+        </div>
+
+        <!-- SCREENS -->
+        <main id="screen-container">
+
+            <!-- 1. SETUP SCREEN -->
+            <section id="screen-setup" class="game-screen active">
+                <div class="screen-header">
+                    <div class="section-title">
+                        <h2>플레이어 등록 (3~13명)</h2>
+                        <span class="badge" id="player-count-badge">0명</span>
+                    </div>
+                </div>
+
+                <div class="screen-body scrollable-body">
+                    <!-- Add Player Input -->
+                    <div class="input-group">
+                        <input type="text" id="input-player-name" placeholder="플레이어 이름 입력..." maxlength="10">
+                        <button id="btn-add-player" class="btn btn-accent">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+
+                    <!-- Players List (Self-expanding list) -->
+                    <div id="players-list" class="players-list-scroll">
+                        <!-- Dynamic Player Badges -->
+                    </div>
+
+                    <!-- Active Roles Preview -->
+                    <div class="roles-preview-box">
+                        <h3>활성화 역할</h3>
+                        <div id="active-roles-list" class="roles-grid">
+                            <!-- Dynamic Active Roles list -->
+                        </div>
+                    </div>
+
+                    <!-- Settings Panel -->
+                    <div id="settings-panel" class="settings-drawer collapsed">
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <span class="setting-label">음성 사회자 (TTS)</span>
+                                <span class="setting-desc">진행 상황을 음성으로 읽어줍니다.</span>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" id="setting-tts-toggle" checked>
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+
+
+                        <div class="setting-item flex-column">
+                            <div class="setting-info">
+                                <span class="setting-label">낮 토론 시간 설정</span>
+                            </div>
+                            <div class="range-value-group">
+                                <input type="range" id="setting-discussion-time" min="30" max="300" step="30" value="120">
+                                <span id="discussion-time-display">2분 00초</span>
+                            </div>
+                        </div>
+
+                        <!-- TTS Speed Adjustment -->
+                        <div class="setting-item flex-column" id="tts-voice-selector-group">
+                            <span class="setting-label">TTS 목소리 속도</span>
+                            <div class="range-value-group">
+                                <input type="range" id="setting-tts-speed" min="0.7" max="1.5" step="0.1" value="1.0">
+                                <span id="tts-speed-display">1.0x</span>
+                            </div>
+                            <button id="btn-test-tts" class="btn btn-sm btn-secondary" style="margin-top: 8px; width: 100%;">
+                                <i data-lucide="volume-2"></i> 목소리 테스트
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <!-- Start Button -->
+                    <button id="btn-start-game" class="btn btn-primary btn-block btn-large">
+                        <i data-lucide="play"></i> 게임 시작하기
+                    </button>
+                </div>
+            </section>
+
+            <!-- 2. ROLE REVEAL SCREEN -->
+            <section id="screen-reveal" class="game-screen">
+                <div class="screen-header">
+                    <h2>역할 확인 단계</h2>
+                    <p class="reveal-instructions">비밀 보장을 위해 핸드폰을 한 명씩 건네받아 확인하세요.</p>
+                </div>
+
+                <div class="screen-body">
+                    <div class="reveal-box">
+                        <h3 id="reveal-player-name">홍길동 님</h3>
+                        
+                        <!-- 3D Card Container -->
+                        <div class="role-card-container">
+                            <div class="role-card" id="interactive-role-card">
+                                <!-- Card Front (Hidden) -->
+                                <div class="role-card-front">
+                                    <div class="mystery-symbol">
+                                        <i data-lucide="help-circle"></i>
+                                    </div>
+                                    <span>터치하여 역할 확인</span>
+                                </div>
+                                <!-- Card Back (Revealed) -->
+                                <div class="role-card-back">
+                                    <div class="card-badge" id="reveal-card-badge">시민 세력</div>
+                                    <div class="card-num-badge" id="reveal-card-no">No. 4</div>
+                                    <i id="reveal-card-icon" data-lucide="user" class="role-icon"></i>
+                                    <h4 id="reveal-card-title">시민</h4>
+                                    <p id="reveal-card-desc">특별한 능력이 없습니다. 낮 단계의 투표를 통해 마피아를 찾아내야 합니다.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <button id="btn-next-player" class="btn btn-primary btn-block btn-large" disabled>확인 완료</button>
+                </div>
+            </section>
+
+            <!-- 3. NIGHT TRANSITION SCREEN -->
+            <section id="screen-night-transition" class="game-screen">
+                <div class="screen-header">
+                    <h2>밤이 되었습니다</h2>
+                </div>
+
+                <div class="screen-body">
+                    <div class="night-transition-layout">
+                        <div class="moon-box">
+                            <i data-lucide="moon" class="pulsing-moon"></i>
+                        </div>
+                        <p class="instruction-text">모두 눈을 감아주세요.</p>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <!-- 자동 밤 시작 카운트다운 표시 (버튼 제거) -->
+                    <div id="night-countdown-display" style="font-size:2rem; text-align:center; width:100%; padding:12px 0;">10</div>
+                </div>
+            </section>
+
+            <!-- 4. NIGHT ACTION SCREEN (SECRET INPUTS) -->
+            <section id="screen-night-action" class="game-screen">
+                <!-- Invisible overlay to prompt screen touch to activate -->
+                <div id="night-privacy-overlay" class="privacy-overlay">
+                    <div class="privacy-content">
+                        <i data-lucide="eye-off" class="privacy-icon"></i>
+                        <h3 id="privacy-target-role">역할 확인 대기</h3>
+                        <p id="privacy-target-desc">가운데에 핸드폰을 놓고 모두 손가락을 올려주세요. 해당 직업인 분만 화면을 터치하여 선택해주세요.</p>
+                        <button id="btn-privacy-unlock" class="btn btn-accent btn-large">화면 터치하여 선택</button>
+                    </div>
+                </div>
+
+                <div class="screen-header">
+                    <div class="role-tag" id="night-role-tag">마피아 세력</div>
+                    <h2 id="night-action-title">마피아의 공격</h2>
+                    <p id="night-action-instruction">해당하는 분은 화면을 터치하여 선택해주세요.</p>
+                </div>
+
+                <div class="screen-body scrollable-body">
+                    <!-- Target selection list (2 Columns grid) -->
+                    <div id="night-targets-list" class="targets-list-grid">
+                        <!-- Alive players to pick -->
+                    </div>
+
+                    <!-- Investigation result box -->
+                    <div id="night-action-result" class="result-box hidden">
+                        <p class="result-label">조사 결과</p>
+                        <p class="result-text" id="night-result-text">이순신 님은 마피아가 아닙니다.</p>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <button id="btn-confirm-night-action" class="btn btn-accent btn-block btn-large" disabled>선택 완료</button>
+                </div>
+            </section>
+
+            <!-- 5. DAY TRANSITION SCREEN (ANNOUNCEMENT) -->
+            <section id="screen-day-transition" class="game-screen">
+                <div class="screen-header">
+                    <h2>아침이 되었습니다</h2>
+                </div>
+
+                <div class="screen-body">
+                    <div class="day-transition-layout">
+                        <div class="sun-box">
+                            <i data-lucide="sun" class="glowing-sun"></i>
+                        </div>
+                        
+                        <div class="morning-report-card">
+                            <h3>지난 밤의 사건</h3>
+                            <div class="report-content" id="morning-report-text">
+                                <!-- E.g. 홍길동 님이 마피아에 의해 살해되었습니다. -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <button id="btn-start-discussion" class="btn btn-primary btn-block btn-large">
+                        토론 시작하기
+                    </button>
+                </div>
+            </section>
+
+            <!-- 6. DAY DISCUSSION TIMER SCREEN -->
+            <section id="screen-day-discussion" class="game-screen">
+                <div class="screen-header">
+                    <h2>자유 토론 단계</h2>
+                    <p>마피아로 의심되는 사람에 대해 대화해 보세요.</p>
+                </div>
+
+                <div class="screen-body">
+                    <!-- Circular Timer Display -->
+                    <div class="timer-container">
+                        <svg class="timer-svg" viewBox="0 0 100 100">
+                            <circle class="timer-circle-bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="timer-circle-prog" id="timer-prog-bar" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="timer-text" id="timer-time-display">02:00</div>
+                    </div>
+
+                    <!-- Timer Controls -->
+                    <div class="timer-controls">
+                        <button id="btn-timer-toggle" class="btn btn-secondary btn-circle">
+                            <i data-lucide="pause" id="timer-toggle-icon"></i>
+                        </button>
+                    </div>
+
+                    <!-- Alive Players Panel -->
+                    <div class="alive-players-panel">
+                        <h3>생존자 현황</h3>
+                        <div class="mini-players-grid" id="discussion-alive-players">
+                            <!-- Alive players overview -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <button id="btn-go-to-vote" class="btn btn-accent btn-block btn-large">
+                        투표하러 가기
+                    </button>
+                </div>
+            </section>
+
+            <!-- 7. DAY VOTE SCREEN -->
+            <section id="screen-day-vote" class="game-screen">
+                <div class="screen-header">
+                    <h2>투표 및 처형</h2>
+                    <p>현실 거수투표 완료 후, 최다 득표자를 지목해 처형하세요.</p>
+                </div>
+
+                <div class="screen-body scrollable-body">
+                    <!-- Vote Target Selection (2 Columns grid) -->
+                    <div id="vote-targets-list" class="targets-list-grid">
+                        <!-- Alive players to pick -->
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <button id="btn-skip-execution" class="btn btn-secondary btn-block">
+                        아무도 처형하지 않고 밤으로 가기
+                    </button>
+                    <button id="btn-confirm-execution" class="btn btn-accent btn-block btn-large" disabled>처형 진행</button>
+                </div>
+            </section>
+
+            <!-- 8. GAME OVER SCREEN -->
+            <section id="screen-game-over" class="game-screen">
+                <div class="screen-header">
+                    <h2 id="game-over-winner-title">시민 세력 승리!</h2>
+                    <p class="winner-desc" id="game-over-winner-desc">모든 마피아가 제거되었습니다.</p>
+                </div>
+
+                <div class="screen-body scrollable-body">
+                    <div class="trophy-box" id="game-over-winner-box">
+                        <i data-lucide="trophy" class="trophy-icon"></i>
+                    </div>
+
+                    <!-- Game Recap / Log -->
+                    <div class="game-recap-box">
+                        <h3>배정 역할 요약</h3>
+                        <div class="recap-roles-list" id="game-over-roles-list">
+                            <!-- Lists all players and their original roles -->
+                        </div>
+                    </div>
+
+                    <!-- Game timeline timeline logs -->
+                    <div class="timeline-log-box">
+                        <h3>게임 타임라인</h3>
+                        <div class="timeline-scroll" id="game-over-timeline-log">
+                            <!-- Daily logs -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="screen-footer">
+                    <button id="btn-restart-game" class="btn btn-primary btn-block btn-large">
+                        새 게임 시작하기 (이전 멤버 유지)
+                    </button>
+                </div>
+            </section>
+
+        </main>
+        
+    </div>
+
+    <!-- Hidden audio element or web audio anchor -->
+    <div id="audio-anchor"></div>
+    <audio id="audio-night" src="night.mp3" loop preload="auto"></audio>
+    <audio id="audio-day" src="day.mp3" loop preload="auto"></audio>
+    <audio id="audio-vote" src="vote.mp3" loop preload="auto"></audio>
+    <audio id="audio-final" src="final.mp3" loop preload="auto"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
