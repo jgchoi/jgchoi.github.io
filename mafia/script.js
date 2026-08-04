@@ -35,13 +35,18 @@ let discussionDuration = 120; // 2 minutes in seconds
 let ttsSpeed = 1.0;
 let ttsPitch = 1.0;
 
+// Night action acknowledgement guards
+let copAcked = false; // true when cop's modal has been acknowledged
+let executionAutoAdvanceTimer = null; // (may already exist) safe to ensure declared
+
 // Timer state
 let timerInterval = null;
 let timerTimeLeft = 0;
 let isTimerPaused = false;
 
 // Timeout handle for execution auto-advance (so Next button can cancel it)
-let executionAutoAdvanceTimer = null;
+// already declared above; reuse executionAutoAdvanceTimer variable
+
 
 // Role Metadata Definitions
 const ROLES_METADATA = {
@@ -575,6 +580,7 @@ function showScreen(screenId) {
 
 // Initialise Game & Role shuffles
 function startGame() {
+    console.debug('startGame: called', { playersCount: players.length, isTtsEnabled, isDroneEnabled, discussionDuration });
     if (players.length < 3) {
         alert("최소 3명 이상의 플레이어가 필요합니다!");
         return;
@@ -753,33 +759,30 @@ function enterNightTransition() {
 }
 
 function compileNightSequence() {
-    const count = players.length;
     nightSequence = [];
 
+    const hasRole = (roleKey) => players.some(p => p.role === roleKey);
+    const hasEither = (roleKeys) => players.some(p => roleKeys.includes(p.role));
+
     if (dayNumber === 1) {
-        // First night: lovers (if present), mafia meetup, and allow cop to investigate on night 1 per request
-        if (count >= 12) {
+        // First night: include lovers only if lovers exist, mafia meetup only if mafia exists,
+        // and cop only if cop exists in the assignment.
+        if (hasEither(['loverA', 'loverB'])) {
             nightSequence.push('lovers');
         }
-        nightSequence.push('mafia');
-        // Allow cop to act on first night as well
-        nightSequence.push('cop');
+        if (hasRole('mafia')) {
+            nightSequence.push('mafia');
+        }
+        if (hasRole('cop')) {
+            nightSequence.push('cop');
+        }
     } else {
-        // Regular nights: mafia, cop, doctor, then optional roles
-        // Mafia (Always)
-        nightSequence.push('mafia');
-        // Cop (Always)
-        nightSequence.push('cop');
-        // Doctor (Always)
-        nightSequence.push('doctor');
-        // Medium (Night 2 onwards, if Medium active)
-        if (count >= 8) {
-            nightSequence.push('medium');
-        }
-        // Soldier (if present)
-        if (count >= 13) {
-            nightSequence.push('soldier');
-        }
+        // Regular nights: include roles only if they are present in player assignments
+        if (hasRole('mafia')) nightSequence.push('mafia');
+        if (hasRole('cop')) nightSequence.push('cop');
+        if (hasRole('doctor')) nightSequence.push('doctor');
+        if (hasRole('medium')) nightSequence.push('medium');
+        if (hasRole('soldier')) nightSequence.push('soldier');
     }
 
     nightChoices = {
@@ -888,6 +891,22 @@ function setupNightActionUI(roleKey) {
     const aliveRoleHolders = players.filter(p => p.role === roleKey || (roleKey === 'lovers' && (p.role === 'loverA' || p.role === 'loverB')));
     const hasAliveHolders = aliveRoleHolders.some(p => p.isAlive);
     
+    // If no alive holders for this role, skip immediately to avoid stalling the night sequence
+    if (!hasAliveHolders) {
+        console.info(`Night step '${roleKey}' skipped: no alive holders.`);
+        const targetsList = document.getElementById('night-targets-list');
+        if (targetsList) {
+            const infoDiv = document.createElement('div');
+            infoDiv.className = 'result-box';
+            const roleName = (ROLES_METADATA[roleKey] && ROLES_METADATA[roleKey].name) ? ROLES_METADATA[roleKey].name : roleKey;
+            infoDiv.innerHTML = `<p class="result-text">${escapeHtml(roleName)} 역할 보유자가 없거나 모두 사망했습니다. 다음 단계로 이동합니다.</p>`;
+            targetsList.appendChild(infoDiv);
+        }
+        // Small delay so UI updates are visible, then continue
+        setTimeout(() => { executeNightStepComplete(roleKey); }, 600);
+        return;
+    }
+    
     // Build selection options
     if (roleKey === 'lovers') {
         // Show lovers information
@@ -983,6 +1002,7 @@ function setupNightActionUI(roleKey) {
             };
         } else {
             // Show selection lists
+            let selectableExists = false;
             players.forEach(targetPlayer => {
                 // Can only target alive players
                 if (!targetPlayer.isAlive) return;
@@ -995,13 +1015,33 @@ function setupNightActionUI(roleKey) {
                     item.innerHTML = `${escapeHtml(targetPlayer.name)} <span style="margin-left:8px; font-size:0.85rem; font-weight:700; color: var(--color-mafia);">마피아</span>`;
                     item.style.opacity = '0.65';
                     item.style.pointerEvents = 'none';
+                } else if (roleKey === 'cop') {
+                    // If this player has been investigated before, show remembered result and disable selecting
+                    const prev = copInvestigatedPlayers.find(inv => inv.target === targetPlayer.name);
+                    if (prev) {
+                        const wasMafia = players.find(p => p.name === prev.target)?.role === 'mafia';
+                        item.innerHTML = `${escapeHtml(targetPlayer.name)} <span style="margin-left:8px; font-size:0.85rem; font-weight:700; color: ${wasMafia ? 'var(--color-mafia)' : 'var(--color-cop)'};">${wasMafia ? '마피아' : '시민'}</span>`;
+                        item.style.opacity = '0.7';
+                        item.style.pointerEvents = 'none';
+                        item.title = `이미 조사됨 (밤 ${prev.day})`;
+                    } else {
+                        // selectable
+                        selectableExists = true;
+                        item.textContent = targetPlayer.name;
+                        item.onclick = () => {
+                            if (targetsList.style.pointerEvents === 'none') return;
+                            document.querySelectorAll('.target-item').forEach(el => el.classList.remove('selected'));
+                            item.classList.add('selected');
+
+                            selectedPlayerId = targetPlayer.id;
+                            confirmBtn.disabled = false;
+                        };
+                    }
                 } else {
+                    // Default selectable behavior for doctor and other roles
                     item.textContent = targetPlayer.name;
-
                     item.onclick = () => {
-                        // If selection grid is locked (cop already confirmed), ignore click
                         if (targetsList.style.pointerEvents === 'none') return;
-
                         document.querySelectorAll('.target-item').forEach(el => el.classList.remove('selected'));
                         item.classList.add('selected');
 
@@ -1012,6 +1052,16 @@ function setupNightActionUI(roleKey) {
 
                 targetsList.appendChild(item);
             });
+
+            // If cop has no new selectable targets (everyone alive was previously investigated), allow proceeding without selection
+            if (roleKey === 'cop' && !selectableExists) {
+                const note = document.createElement('div');
+                note.className = 'result-box';
+                note.innerHTML = `<p class="result-text">이미 생존자 중 조사 가능한 대상이 없습니다. 이전 조사 결과가 기억되어 표시됩니다.</p>`;
+                targetsList.appendChild(note);
+                confirmBtn.disabled = false;
+                confirmBtn.onclick = () => { executeNightStepComplete(roleKey); };
+            }
 
             confirmBtn.onclick = () => {
                 if (roleKey === 'cop' && hasAliveHolders) {
@@ -1071,7 +1121,10 @@ function setupNightActionUI(roleKey) {
                         okBtn.style.padding = '8px 12px';
 
                         okBtn.onclick = () => {
-                            // remove dialog, lock grid and finish the cop step
+                            // mark acknowledged so executeNightStepComplete won't be blocked
+                            copAcked = true;
+
+                            // remove dialog
                             if (invOverlay && invOverlay.parentNode) invOverlay.parentNode.removeChild(invOverlay);
 
                             // show locked state and proceed
@@ -1079,8 +1132,11 @@ function setupNightActionUI(roleKey) {
                             const confirmBtnLocal = document.getElementById('btn-confirm-night-action');
                             if (confirmBtnLocal) confirmBtnLocal.disabled = true;
 
-                            // proceed to next night step
+                            // proceed to next night step (only allowed because copAcked==true)
                             executeNightStepComplete(roleKey);
+
+                            // reset ack flag after a tick so further nights require re-ack
+                            setTimeout(() => { copAcked = false; }, 100);
                         };
 
                         box.appendChild(title);
@@ -1138,9 +1194,15 @@ function confirmNightAction(roleKey) {
 }
 
 function executeNightStepComplete(roleKey) {
+    // Guard: cop action must be explicitly acknowledged via modal
+    if (roleKey === 'cop' && !copAcked) {
+        console.warn('executeNightStepComplete blocked: cop not acknowledged yet.');
+        return;
+    }
+
     // Restore confirm button if hidden by Cop check
     const confirmBtn = document.getElementById('btn-confirm-night-action');
-    confirmBtn.classList.remove('hidden');
+    if (confirmBtn) confirmBtn.classList.remove('hidden');
     
     // Transition back to privacy blackout with countdown
     const overlay = document.getElementById('night-privacy-overlay');
@@ -1276,6 +1338,8 @@ function checkWinConditions() {
 }
 
 function endGame(winner) {
+    console.debug('endGame: called', { winner, playersCount: players.length, gameLogLength: gameLog.length });
+
     showScreen('screen-game-over');
     currentPhase = 'game-over';
     
@@ -1331,6 +1395,8 @@ function endGame(winner) {
     });
     
     lucide.createIcons();
+
+    console.debug('endGame: completed, UI updated for game-over screen');
 }
 
 // Start Discussion Screen timer
@@ -1736,25 +1802,30 @@ function executePlayer(playerId) {
 }
 
 // Reset Game / Wipe State
-function resetGame(keepPlayers = false) {
+function resetGame() {
+    console.debug('resetGame: called', { playersCount: players.length, currentPhase, isTtsEnabled, isDroneEnabled, discussionDuration });
+
+    // stop timers and audio
     clearInterval(timerInterval);
     stopSuspenseDrone();
-    
-    if (!keepPlayers) {
-        players = [];
-    } else {
-        // Strip roles, reset status — keep the player list but ensure they are editable
-        players.forEach(p => {
-            p.role = null;
-            p.isAlive = true;
-        });
-    }
-    
+    stopAudio('audio-night');
+    stopAudio('audio-day');
+    stopAudio('audio-vote');
+    stopAudio('audio-final');
+
+    // Keep existing players but reset roles and alive status so a new game can be started with same member list
+    players.forEach(p => {
+        p.role = null;
+        p.isAlive = true;
+    });
+
+    // Reset core game state
     dayNumber = 1;
     gameLog = [];
     lastExecutedPlayer = null;
     soldierShieldActive = true;
     copInvestigatedPlayers = [];
+    currentPhase = 'setup';
 
     // Ensure setup UI is editable: enable add input/button and make player list interactive
     const input = document.getElementById('input-player-name');
@@ -1768,11 +1839,42 @@ function resetGame(keepPlayers = false) {
     document.querySelectorAll('[data-immutable="true"]').forEach(el => el.removeAttribute('data-immutable'));
     document.querySelectorAll('.player-badge.immutable').forEach(el => el.classList.remove('immutable'));
 
+    // Ensure known overlays/modals are removed or disabled
+    try {
+        const nightOverlay = document.getElementById('night-privacy-overlay');
+        if (nightOverlay) { nightOverlay.style.opacity = 0; nightOverlay.style.pointerEvents = 'none'; }
+        const execAnn = document.getElementById('execution-announcement');
+        if (execAnn && execAnn.parentNode) execAnn.parentNode.removeChild(execAnn);
+        const settingsDialog = document.getElementById('settings-dialog-overlay');
+        if (settingsDialog && settingsDialog.parentNode) settingsDialog.parentNode.removeChild(settingsDialog);
+        const finalCard = document.getElementById('final-defense-card');
+        if (finalCard && finalCard.parentNode) finalCard.parentNode.removeChild(finalCard);
+        // Remove any floating modals created dynamically (investigation modal): look for elements with text '조사 결과' or role-related overlays
+        document.querySelectorAll('div').forEach(d => {
+            try {
+                if (d.innerText && (d.innerText.includes('조사 결과') || d.innerText.includes('초기화 오류가 발생했습니다') || d.id === 'invOverlay')) {
+                    if (d.parentNode) d.parentNode.removeChild(d);
+                }
+            } catch (e) {}
+        });
+    } catch (e) { console.warn('resetGame: overlay cleanup error', e); }
+
+    // Clear inline pointer-events that may block interaction and re-enable buttons/inputs
+    try {
+        document.querySelectorAll('[style]').forEach(el => {
+            if (el.style && el.style.pointerEvents) el.style.pointerEvents = '';
+        });
+        document.querySelectorAll('button').forEach(b => b.disabled = false);
+        const inputName = document.getElementById('input-player-name'); if (inputName) inputName.disabled = false;
+    } catch (e) { console.warn('resetGame: enable UI error', e); }
+
+    // Render setup
     showScreen('screen-setup');
-    currentPhase = 'setup';
-    
     renderSetupScreen();
-    speak("게임이 초기화되었습니다.");
+
+    console.debug('resetGame: completed', { playersCount: players.length });
+    // Keep TTS short and non-identifying
+    speak("새 게임 설정이 완료되었습니다.");
 }
 
 // Escape html tags helper
@@ -1971,86 +2073,101 @@ function showSettingsDialog() {
 
 // Listeners Bindings
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Setup Screen buttons
-    document.getElementById('btn-add-player').addEventListener('click', addPlayer);
-    document.getElementById('input-player-name').addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') addPlayer();
-    });
+    try {
+        // 1. Setup Screen buttons
+        const btnAdd = document.getElementById('btn-add-player');
+        if (btnAdd) btnAdd.addEventListener('click', addPlayer);
+        const inputPlayer = document.getElementById('input-player-name');
+        if (inputPlayer) inputPlayer.addEventListener('keydown', (e) => { if (e.key === 'Enter') addPlayer(); });
+        
+        const btnStart = document.getElementById('btn-start-game');
+        if (btnStart) btnStart.addEventListener('click', startGame);
+        
+        // Toggle Settings panel drawer (setup-screen inline button removed; guard in case it exists)
+        const btnToggleSettings = document.getElementById('btn-toggle-settings');
+        if (btnToggleSettings) {
+            btnToggleSettings.addEventListener('click', () => {
+                const panel = document.getElementById('settings-panel');
+                if (panel) panel.classList.toggle('collapsed');
+            });
+        }
+        
+        // Settings adjustments listeners
+        const ttsToggleEl = document.getElementById('setting-tts-toggle');
+        if (ttsToggleEl) ttsToggleEl.addEventListener('change', (e) => { isTtsEnabled = e.target.checked; });
+        
+        const discTimeRange = document.getElementById('setting-discussion-time');
+        if (discTimeRange) discTimeRange.addEventListener('input', (e) => { discussionDuration = parseInt(e.target.value); updateSettingsUI(); });
+        
+        const ttsSpeedRange = document.getElementById('setting-setting-tts-speed') || document.getElementById('setting-tts-speed');
+        if (ttsSpeedRange) ttsSpeedRange.addEventListener('input', (e) => { ttsSpeed = parseFloat(e.target.value); updateSettingsUI(); });
+        
+        const btnTestTts = document.getElementById('btn-test-tts');
+        if (btnTestTts) btnTestTts.addEventListener('click', () => { initAudio(); speak("마피아 게임 사회자 테스트 음성입니다. 목소리가 정상적으로 들리시나요?"); });
+        
+        // Reset Header Button
+        // Header settings button opens a modal dialog showing current settings
+        const btnReset = document.getElementById('btn-reset-game');
+        if (btnReset) btnReset.addEventListener('click', () => { showSettingsDialog(); });
     
-    document.getElementById('btn-start-game').addEventListener('click', startGame);
-    
-    // Toggle Settings panel drawer (setup-screen inline button removed; guard in case it exists)
-    const btnToggleSettings = document.getElementById('btn-toggle-settings');
-    if (btnToggleSettings) {
-        btnToggleSettings.addEventListener('click', () => {
-            const panel = document.getElementById('settings-panel');
-            if (panel) panel.classList.toggle('collapsed');
-        });
-    }
-    
-    // Settings adjustments listeners
-    document.getElementById('setting-tts-toggle').addEventListener('change', (e) => {
-        isTtsEnabled = e.target.checked;
-    });
-    
-    const discTimeRange = document.getElementById('setting-discussion-time');
-    discTimeRange.addEventListener('input', (e) => {
-        discussionDuration = parseInt(e.target.value);
+        // 2. Reveal Screen buttons
+        // Support both a dedicated reveal button (btn-reveal-card) and clicking the card itself (interactive-role-card)
+        const revealCardEl = document.getElementById('interactive-role-card') || document.getElementById('btn-reveal-card');
+        if (revealCardEl) revealCardEl.addEventListener('click', revealCard);
+        const btnNextPlayer = document.getElementById('btn-next-player');
+        if (btnNextPlayer) btnNextPlayer.addEventListener('click', nextPlayerReveal);
+        
+        // 3. Night Transition: automatic countdown (button removed) — no click listener required
+        
+        // 4. Night Action privacy unlocker button
+        const privacyUnlock = document.getElementById('btn-privacy-unlock');
+        if (privacyUnlock) privacyUnlock.addEventListener('click', unlockNightPrivacy);
+        
+        // 5. Day Transition buttons
+        const btnStartDiscussion = document.getElementById('btn-start-discussion');
+        if (btnStartDiscussion) btnStartDiscussion.addEventListener('click', startDiscussion);
+        
+        // 6. Day Discussion Timer controls
+        const btnTimerToggle = document.getElementById('btn-timer-toggle');
+        if (btnTimerToggle) btnTimerToggle.addEventListener('click', toggleTimer);
+        const btnGoVote = document.getElementById('btn-go-to-vote');
+        if (btnGoVote) btnGoVote.addEventListener('click', enterVoteScreen);
+        
+        // 7. Day Vote buttons
+        const btnSkipExec = document.getElementById('btn-skip-execution');
+        if (btnSkipExec) btnSkipExec.addEventListener('click', skipExecution);
+        
+        // 8. Game Over buttons
+        const btnRestart = document.getElementById('btn-restart-game');
+        if (btnRestart) btnRestart.addEventListener('click', () => { console.debug('btn-restart-game clicked', { playersCount: players.length }); resetGame(); });
+        
+        // Load setting defaults
         updateSettingsUI();
-    });
-    
-    const ttsSpeedRange = document.getElementById('setting-setting-tts-speed') || document.getElementById('setting-tts-speed');
-    if (ttsSpeedRange) {
-        ttsSpeedRange.addEventListener('input', (e) => {
-            ttsSpeed = parseFloat(e.target.value);
-            updateSettingsUI();
-        });
-    }
-    
-    document.getElementById('btn-test-tts').addEventListener('click', () => {
-        initAudio();
-        speak("마피아 게임 사회자 테스트 음성입니다. 목소리가 정상적으로 들리시나요?");
-    });
-    
-    // Reset Header Button
-    // Header settings button opens a modal dialog showing current settings
-    document.getElementById('btn-reset-game').addEventListener('click', () => {
-        showSettingsDialog();
-    });
+        
+        // Render initial setup
+        renderSetupScreen();
+    } catch (err) {
+        console.error('Initialization error:', err);
+        // Show user-visible error overlay to aid debugging
+        const errOverlay = document.createElement('div');
+        errOverlay.style.position = 'fixed';
+        errOverlay.style.left = 0;
+        errOverlay.style.top = 0;
+        errOverlay.style.right = 0;
+        errOverlay.style.bottom = 0;
+        errOverlay.style.background = 'rgba(0,0,0,0.85)';
+        errOverlay.style.color = '#fff';
+        errOverlay.style.display = 'flex';
+        errOverlay.style.alignItems = 'center';
+        errOverlay.style.justifyContent = 'center';
+        errOverlay.style.zIndex = 20000;
+        errOverlay.style.padding = '20px';
 
-    // Remove the old reset functionality: resetGame(true) is no longer bound to header button.
-    
-    // 2. Reveal Screen buttons
-    // Support both a dedicated reveal button (btn-reveal-card) and clicking the card itself (interactive-role-card)
-    const revealCardEl = document.getElementById('interactive-role-card') || document.getElementById('btn-reveal-card');
-    if (revealCardEl) {
-        revealCardEl.addEventListener('click', revealCard);
+        const msg = document.createElement('div');
+        msg.style.maxWidth = '92%';
+        msg.style.textAlign = 'left';
+        msg.innerHTML = `<h3 style="margin-bottom:8px;">초기화 오류가 발생했습니다</h3><pre style="white-space:pre-wrap;color:#ffdddd;">${(err && err.stack) ? err.stack : String(err)}</pre><p>개발 콘솔을 확인하세요.</p>`;
+        errOverlay.appendChild(msg);
+        document.body.appendChild(errOverlay);
     }
-    document.getElementById('btn-next-player').addEventListener('click', nextPlayerReveal);
-    
-    // 3. Night Transition: automatic countdown (button removed) — no click listener required
-    
-    // 4. Night Action privacy unlocker button
-    document.getElementById('btn-privacy-unlock').addEventListener('click', unlockNightPrivacy);
-    
-    // 5. Day Transition buttons
-    document.getElementById('btn-start-discussion').addEventListener('click', startDiscussion);
-    
-    // 6. Day Discussion Timer controls
-    document.getElementById('btn-timer-toggle').addEventListener('click', toggleTimer);
-    document.getElementById('btn-go-to-vote').addEventListener('click', enterVoteScreen);
-    
-    // 7. Day Vote buttons
-    document.getElementById('btn-skip-execution').addEventListener('click', skipExecution);
-    
-    // 8. Game Over buttons
-    document.getElementById('btn-restart-game').addEventListener('click', () => {
-        resetGame(true);
-    });
-    
-    // Load setting defaults
-    updateSettingsUI();
-    
-    // Render initial setup
-    renderSetupScreen();
 });
