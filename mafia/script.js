@@ -1805,13 +1805,16 @@ function executePlayer(playerId) {
 function resetGame() {
     console.debug('resetGame: called', { playersCount: players.length, currentPhase, isTtsEnabled, isDroneEnabled, discussionDuration });
 
-    // stop timers and audio
-    clearInterval(timerInterval);
+    // Stop timers, scheduled timeouts and audio
+    try { if (timerInterval) { clearInterval(timerInterval); timerInterval = null; } } catch(e){}
+    try { if (executionAutoAdvanceTimer) { clearTimeout(executionAutoAdvanceTimer); executionAutoAdvanceTimer = null; } } catch(e){}
     stopSuspenseDrone();
     stopAudio('audio-night');
     stopAudio('audio-day');
     stopAudio('audio-vote');
     stopAudio('audio-final');
+    // Cancel any TTS in-flight
+    try { window.speechSynthesis.cancel(); } catch(e){}
 
     // Keep existing players but reset roles and alive status so a new game can be started with same member list
     players.forEach(p => {
@@ -1819,27 +1822,32 @@ function resetGame() {
         p.isAlive = true;
     });
 
-    // Reset core game state
+    // Reset all transient game state to clear any side-effects between games
     dayNumber = 1;
     gameLog = [];
     lastExecutedPlayer = null;
     soldierShieldActive = true;
     copInvestigatedPlayers = [];
     currentPhase = 'setup';
+    revealIndex = 0;
+    nightStepIndex = 0;
+    nightSequence = [];
+    nightChoices = { mafiaTarget: null, doctorTarget: null, copTarget: null };
+    copAcked = false;
 
     // Ensure setup UI is editable: enable add input/button and make player list interactive
     const input = document.getElementById('input-player-name');
-    if (input) input.disabled = false;
+    if (input) { input.disabled = false; }
     const addBtn = document.getElementById('btn-add-player');
-    if (addBtn) addBtn.disabled = false;
+    if (addBtn) { addBtn.disabled = false; }
     const playersListEl = document.getElementById('players-list');
-    if (playersListEl) playersListEl.style.pointerEvents = '';
+    if (playersListEl) { playersListEl.style.pointerEvents = ''; }
 
     // Remove any DOM-level flags that might have marked members as immutable
     document.querySelectorAll('[data-immutable="true"]').forEach(el => el.removeAttribute('data-immutable'));
     document.querySelectorAll('.player-badge.immutable').forEach(el => el.classList.remove('immutable'));
 
-    // Ensure known overlays/modals are removed or disabled
+    // Ensure known overlays/modals are removed or disabled (only target known dynamic IDs)
     try {
         const nightOverlay = document.getElementById('night-privacy-overlay');
         if (nightOverlay) { nightOverlay.style.opacity = 0; nightOverlay.style.pointerEvents = 'none'; }
@@ -1849,14 +1857,10 @@ function resetGame() {
         if (settingsDialog && settingsDialog.parentNode) settingsDialog.parentNode.removeChild(settingsDialog);
         const finalCard = document.getElementById('final-defense-card');
         if (finalCard && finalCard.parentNode) finalCard.parentNode.removeChild(finalCard);
-        // Remove any floating modals created dynamically (investigation modal): look for elements with text '조사 결과' or role-related overlays
-        document.querySelectorAll('div').forEach(d => {
-            try {
-                if (d.innerText && (d.innerText.includes('조사 결과') || d.innerText.includes('초기화 오류가 발생했습니다') || d.id === 'invOverlay')) {
-                    if (d.parentNode) d.parentNode.removeChild(d);
-                }
-            } catch (e) {}
-        });
+        const invOverlay = document.getElementById('invOverlay');
+        if (invOverlay && invOverlay.parentNode) invOverlay.parentNode.removeChild(invOverlay);
+        const privacyLocked = document.getElementById('privacy-locked-badge');
+        if (privacyLocked && privacyLocked.parentNode) privacyLocked.parentNode.removeChild(privacyLocked);
     } catch (e) { console.warn('resetGame: overlay cleanup error', e); }
 
     // Clear inline pointer-events that may block interaction and re-enable buttons/inputs
@@ -1868,7 +1872,15 @@ function resetGame() {
         const inputName = document.getElementById('input-player-name'); if (inputName) inputName.disabled = false;
     } catch (e) { console.warn('resetGame: enable UI error', e); }
 
-    // Render setup
+    // Reset visual containers used during night/day flows
+    try {
+        const targetsList = document.getElementById('night-targets-list'); if (targetsList) { targetsList.innerHTML = ''; targetsList.style.pointerEvents = 'auto'; }
+        const resultBox = document.getElementById('night-action-result'); if (resultBox) { resultBox.classList.add('hidden'); }
+        const morningReport = document.getElementById('morning-report-text'); if (morningReport) morningReport.innerHTML = '';
+        const timelineEl = document.getElementById('game-over-timeline-log'); if (timelineEl) timelineEl.innerHTML = '';
+    } catch(e) { console.warn('resetGame: visual reset error', e); }
+
+    // Render setup (preserve the players array content)
     showScreen('screen-setup');
     renderSetupScreen();
 
