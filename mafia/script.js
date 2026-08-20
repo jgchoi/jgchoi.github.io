@@ -44,10 +44,6 @@ let timerInterval = null;
 let timerTimeLeft = 0;
 let isTimerPaused = false;
 
-// Timeout handle for execution auto-advance (so Next button can cancel it)
-// already declared above; reuse executionAutoAdvanceTimer variable
-
-
 // Role Metadata Definitions
 const ROLES_METADATA = {
     mafia: {
@@ -539,7 +535,7 @@ function addPlayer() {
     if (!name) return;
     
     if (players.length >= 13) {
-        alert("최대 13명까지만 참여할 수 있습니다. (기존 규칙 최적화 인원: 5~13명)");
+        alert("최대 13명까지만 참여할 수 있습니다.");
         return;
     }
     
@@ -721,15 +717,13 @@ function enterNightTransition() {
 
     // Cancel voices and (conditionally) start drone synth
     window.speechSynthesis.cancel();
-    const synthIndicator = document.querySelector('.synth-indicator');
-    if (synthIndicator) synthIndicator.style.display = isDroneEnabled ? 'flex' : 'none';
     startSuspenseDrone();
 
     // Audio: switch to night background
     stopAudio('audio-day');
     playAudioLoop('audio-night');
 
-    // 3초 자동 카운트다운 표시 후 밤 진행 자동 시작
+    // 안내 음성과 3초 카운트다운을 동시에 시작합니다.
     let countdown = 3;
     const display = document.getElementById('night-countdown-display');
     if (display) display.textContent = String(countdown);
@@ -740,22 +734,15 @@ function enterNightTransition() {
             countdown--;
             setTimeout(tick, 1000);
         } else {
-            speak("밤이 시작됩니다. 가운데에 핸드폰을 놓고 모두 손가락을 올려주세요.", () => {
-                // Compile Night Sequence based on active roles in play
-                compileNightSequence();
-                nightStepIndex = 0;
-                // Small delay for UX smoothness then proceed
-                setTimeout(() => {
-                    progressNightStep();
-                }, 500);
-            });
+            // 음성이 끝날 때까지 기다리지 않고 정확히 3초 후 다음 단계로 이동합니다.
+            compileNightSequence();
+            nightStepIndex = 0;
+            progressNightStep();
         }
     };
 
-    // Announce and start countdown
-    speak(`밤이 다가오고 있습니다. 3초 후에 밤이 자동으로 시작됩니다.`, () => {
-        tick();
-    });
+    speak(`밤이 다가오고 있습니다. 3초 후에 밤이 자동으로 시작됩니다.`);
+    tick();
 }
 
 function compileNightSequence() {
@@ -765,12 +752,15 @@ function compileNightSequence() {
     const hasEither = (roleKeys) => players.some(p => roleKeys.includes(p.role));
 
     if (dayNumber === 1) {
-        // First night: include lovers only if lovers exist, mafia meetup only if mafia exists,
-        // and cop only if cop exists in the assignment.
+        // First night: include lovers if present, mafia meetup only for multiple
+        // mafia members, and cop only if cop exists in the assignment.
         if (hasEither(['loverA', 'loverB'])) {
             nightSequence.push('lovers');
         }
-        if (hasRole('mafia')) {
+        // A solo mafia already knows their own role, so there is no useful
+        // first-night meetup step unless at least two mafia members exist.
+        const mafiaCount = players.filter(p => p.role === 'mafia').length;
+        if (mafiaCount > 1) {
             nightSequence.push('mafia');
         }
         if (hasRole('cop')) {
@@ -808,9 +798,9 @@ function setupNightActionUI(roleKey) {
     currentPhase = 'night-action';
     
     // Apply role-based theme to dashboard (guard if element missing to avoid JS errors)
-    const dashboard = document.querySelector('.night-dashboard');
+    const dashboard = document.getElementById('screen-night-action');
     if (dashboard) {
-        dashboard.className = 'night-dashboard'; // Reset classes
+        dashboard.classList.remove('theme-mafia', 'theme-cop', 'theme-doctor', 'theme-special');
     }
     
     let instructions = "";
@@ -1087,6 +1077,7 @@ function setupNightActionUI(roleKey) {
 
                         // Create modal dialog to display investigation result clearly
                         const invOverlay = document.createElement('div');
+                        invOverlay.className = 'modal-overlay modal-result';
                         invOverlay.style.position = 'fixed';
                         invOverlay.style.left = 0;
                         invOverlay.style.top = 0;
@@ -1099,6 +1090,7 @@ function setupNightActionUI(roleKey) {
                         invOverlay.style.zIndex = 10001;
 
                         const box = document.createElement('div');
+                        box.className = 'modal-panel';
                         box.style.background = '#111';
                         box.style.color = '#fff';
                         box.style.padding = '18px';
@@ -1583,9 +1575,10 @@ function showFinalDefense(playerId) {
     if (!card) {
         card = document.createElement('div');
         card.id = 'final-defense-card';
+        card.className = 'final-defense-card modal-section';
         card.style.padding = '20px';
         card.style.textAlign = 'center';
-        card.style.background = 'var(--card-bg, rgba(0,0,0,0.03))';
+        card.style.background = 'var(--bg-card)';
         card.style.borderRadius = '8px';
         card.style.margin = '12px';
         card.style.fontSize = '1.6rem';
@@ -1716,6 +1709,7 @@ function executePlayer(playerId) {
     if (!ann) {
         ann = document.createElement('div');
         ann.id = 'execution-announcement';
+        ann.className = 'modal-overlay modal-result';
         ann.style.position = 'absolute';
         ann.style.left = 0;
         ann.style.top = 0;
@@ -1728,6 +1722,7 @@ function executePlayer(playerId) {
         ann.style.zIndex = 9999;
 
         const inner = document.createElement('div');
+        inner.className = 'modal-panel';
         inner.style.background = 'white';
         inner.style.padding = '24px 28px';
         inner.style.borderRadius = '10px';
@@ -1908,27 +1903,10 @@ function showSettingsDialog() {
 
     const overlay = document.createElement('div');
     overlay.id = 'settings-dialog-overlay';
-    overlay.style.position = 'fixed';
-    overlay.style.left = 0;
-    overlay.style.top = 0;
-    overlay.style.right = 0;
-    overlay.style.bottom = 0;
-    overlay.style.background = 'rgba(0,0,0,0.6)';
-    overlay.style.display = 'flex';
-    overlay.style.alignItems = 'center';
-    overlay.style.justifyContent = 'center';
-    overlay.style.zIndex = 10000;
+    overlay.className = 'modal-overlay';
 
     const panel = document.createElement('div');
-    panel.style.background = '#0b0b0b';
-    panel.style.color = '#ffffff';
-    panel.style.border = '2px solid #ffffff';
-    panel.style.padding = '18px';
-    panel.style.borderRadius = '12px';
-    panel.style.width = '92%';
-    panel.style.maxWidth = '520px';
-    panel.style.boxShadow = '0 8px 30px rgba(0,0,0,0.6)';
-    panel.style.fontFamily = '"Noto Sans KR", sans-serif';
+    panel.className = 'modal-panel';
 
     const title = document.createElement('h3');
     title.textContent = '설정';
@@ -1940,11 +1918,7 @@ function showSettingsDialog() {
     // Helper to create section blocks
     function createSection() {
         const sec = document.createElement('div');
-        sec.style.background = '#0f0f0f';
-        sec.style.border = '1px solid rgba(255,255,255,0.06)';
-        sec.style.padding = '10px';
-        sec.style.borderRadius = '8px';
-        sec.style.margin = '10px 0';
+        sec.className = 'modal-section';
         return sec;
     }
 
@@ -2043,29 +2017,16 @@ function showSettingsDialog() {
 
     // Footer actions (Test TTS + Close)
     const footerRow = document.createElement('div');
-    footerRow.style.display = 'flex';
-    footerRow.style.gap = '10px';
-    footerRow.style.marginTop = '12px';
+    footerRow.className = 'modal-actions';
 
     const testBtn = document.createElement('button');
-    testBtn.className = 'btn';
+    testBtn.className = 'btn btn-secondary';
     testBtn.textContent = '목소리 테스트';
-    testBtn.style.flex = '1';
-    testBtn.style.background = '#111';
-    testBtn.style.color = '#fff';
-    testBtn.style.border = '1px solid rgba(255,255,255,0.06)';
-    testBtn.style.padding = '10px 12px';
     testBtn.onclick = () => { initAudio(); speak('마피아 게임 사회자 테스트 음성입니다.'); };
 
     const closeBtn = document.createElement('button');
-    closeBtn.className = 'btn';
+    closeBtn.className = 'btn modal-close';
     closeBtn.textContent = '닫기';
-    closeBtn.style.flex = '0 0 110px';
-    closeBtn.style.background = '#ff4b4b';
-    closeBtn.style.color = '#fff';
-    closeBtn.style.border = 'none';
-    closeBtn.style.padding = '10px 14px';
-    closeBtn.style.borderRadius = '8px';
     closeBtn.onclick = () => {
         // propagate current settings to main controls
         document.getElementById('setting-tts-toggle').checked = isTtsEnabled;
@@ -2095,15 +2056,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const btnStart = document.getElementById('btn-start-game');
         if (btnStart) btnStart.addEventListener('click', startGame);
         
-        // Toggle Settings panel drawer (setup-screen inline button removed; guard in case it exists)
-        const btnToggleSettings = document.getElementById('btn-toggle-settings');
-        if (btnToggleSettings) {
-            btnToggleSettings.addEventListener('click', () => {
-                const panel = document.getElementById('settings-panel');
-                if (panel) panel.classList.toggle('collapsed');
-            });
-        }
-        
         // Settings adjustments listeners
         const ttsToggleEl = document.getElementById('setting-tts-toggle');
         if (ttsToggleEl) ttsToggleEl.addEventListener('change', (e) => { isTtsEnabled = e.target.checked; });
@@ -2111,7 +2063,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const discTimeRange = document.getElementById('setting-discussion-time');
         if (discTimeRange) discTimeRange.addEventListener('input', (e) => { discussionDuration = parseInt(e.target.value); updateSettingsUI(); });
         
-        const ttsSpeedRange = document.getElementById('setting-setting-tts-speed') || document.getElementById('setting-tts-speed');
+        const ttsSpeedRange = document.getElementById('setting-tts-speed');
         if (ttsSpeedRange) ttsSpeedRange.addEventListener('input', (e) => { ttsSpeed = parseFloat(e.target.value); updateSettingsUI(); });
         
         const btnTestTts = document.getElementById('btn-test-tts');
@@ -2123,8 +2075,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (btnReset) btnReset.addEventListener('click', () => { showSettingsDialog(); });
     
         // 2. Reveal Screen buttons
-        // Support both a dedicated reveal button (btn-reveal-card) and clicking the card itself (interactive-role-card)
-        const revealCardEl = document.getElementById('interactive-role-card') || document.getElementById('btn-reveal-card');
+        const revealCardEl = document.getElementById('interactive-role-card');
         if (revealCardEl) revealCardEl.addEventListener('click', revealCard);
         const btnNextPlayer = document.getElementById('btn-next-player');
         if (btnNextPlayer) btnNextPlayer.addEventListener('click', nextPlayerReveal);
