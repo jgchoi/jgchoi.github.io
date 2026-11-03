@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#f5f7fb">
+  <title>하상회 2027 회장 선거</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #687386;
+      --line: #e6eaf0;
+      --primary: #335cff;
+      --success: #147d57;
+      --error: #c53d4b;
+      --shadow: 0 24px 70px rgba(34, 48, 92, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      padding: clamp(24px, 6vw, 72px) 20px;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 10%, rgba(126, 153, 255, 0.28), transparent 32%),
+        radial-gradient(circle at 92% 90%, rgba(116, 220, 190, 0.22), transparent 30%),
+        #f5f7fb;
+      font-family: Arial, "Noto Sans KR", sans-serif;
+    }
+
+    .page { width: min(100%, 680px); margin: 0 auto; }
+    .card {
+      padding: clamp(24px, 5vw, 48px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: var(--shadow);
+    }
+    .eyebrow { margin: 0 0 12px; color: var(--primary); font-size: 13px; font-weight: 700; letter-spacing: .12em; }
+    h1 { margin: 0 0 10px; font-size: clamp(28px, 5vw, 38px); line-height: 1.2; letter-spacing: -.04em; }
+    h2 { margin: 0 0 8px; font-size: clamp(22px, 4vw, 28px); letter-spacing: -.03em; }
+    p { line-height: 1.65; }
+    label { display: block; margin: 24px 0 9px; color: #3e4a5d; font-size: 14px; font-weight: 700; }
+    input, select, button { width: 100%; min-height: 54px; padding: 14px 16px; border-radius: 14px; font: inherit; font-size: 16px; }
+    input, select { border: 1px solid #dce2ec; background: #fff; color: var(--ink); }
+    input:focus, select:focus { outline: 3px solid rgba(51, 92, 255, .18); border-color: var(--primary); }
+    #code { text-align: center; text-transform: uppercase; letter-spacing: .26em; font-weight: 700; }
+    button { margin-top: 24px; border: 0; background: linear-gradient(135deg, var(--primary), #6078ff); color: #fff; font-weight: 700; cursor: pointer; }
+    button:disabled { opacity: .6; cursor: not-allowed; }
+    .muted { margin: 8px 0 0; color: var(--muted); font-size: 14px; }
+    #message { margin: 18px 0 0; padding: 14px 16px; border-radius: 12px; overflow-wrap: anywhere; }
+    .success { color: var(--success); background: #eaf8f1; }
+    .error { color: var(--error); background: #fff0f1; }
+    .result-row { display: flex; justify-content: space-between; gap: 16px; align-items: center; padding: 17px 0; border-bottom: 1px solid var(--line); }
+    .result-row:last-of-type { border-bottom: 0; }
+    .result-row strong { color: var(--primary); font-size: 17px; }
+    footer { margin-top: 22px; color: var(--muted); text-align: center; font-size: 13px; }
+    footer a { color: #41516c; }
+    .api-frame { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+    @media (max-width: 560px) {
+      body { padding: 20px 14px; }
+      .card { border-radius: 22px; padding: 25px 20px 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card" aria-labelledby="page-title">
+      <p class="eyebrow">TORONTO HANMAM CATHOLIC CHURCH 3040</p>
+      <h1 id="page-title">하상회 2027 회장 선거</h1>
+      <div id="app" aria-live="polite" aria-busy="true">
+        <p>투표 정보를 불러오는 중입니다.</p>
+      </div>
+    </section>
+    <footer>
+      개인 투표 코드는 한 번만 사용할 수 있습니다.
+      <span aria-hidden="true"> · </span>
+      <a href="https://script.google.com/macros/s/AKfycbzge1w1aEmiNVXGF-YaGNayrlsYTLdRN-SjLv9gd26rKekBAeLguXb_1xCrBLUsKNoGMA/exec">기존 Apps Script 페이지</a>
+    </footer>
+  </main>
+
+  <iframe class="api-frame" title="선거 API 연결" aria-hidden="true" tabindex="-1"></iframe>
+
+  <script>
+    'use strict';
+
+    const API_URL = 'https://script.google.com/macros/s/AKfycbzge1w1aEmiNVXGF-YaGNayrlsYTLdRN-SjLv9gd26rKekBAeLguXb_1xCrBLUsKNoGMA/exec?api=github-pages';
+    const GITHUB_PAGES_ORIGIN = 'https://jgchoi.github.io';
+    const GAS_ORIGINS = new Set([
+      'https://script.google.com',
+      'https://script.googleusercontent.com'
+    ]);
+    const CODE_PATTERN = /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{5}$/;
+    const frame = document.querySelector('.api-frame');
+    const app = document.getElementById('app');
+    const pending = new Map();
+    let gasOrigin = '';
+    let requestNumber = 0;
+    let readyResolve;
+    let readyReject;
+
+    const bridgeReady = new Promise((resolve, reject) => {
+      readyResolve = resolve;
+      readyReject = reject;
+    });
+
+    window.addEventListener('message', event => {
+      if (event.source !== frame.contentWindow || !GAS_ORIGINS.has(event.origin)) return;
+      const message = event.data;
+      if (!message || message.source !== 'haasang-gas-api') return;
+
+      if (message.type === 'ready') {
+        gasOrigin = event.origin;
+        readyResolve();
+        return;
+      }
+
+      if (message.type !== 'response' || typeof message.id !== 'string') return;
+      const handlers = pending.get(message.id);
+      if (!handlers) return;
+      pending.delete(message.id);
+      clearTimeout(handlers.timer);
+      if (message.ok) handlers.resolve(message.data);
+      else handlers.reject(new Error(message.data && message.data.message || '요청을 처리하지 못했습니다.'));
+    });
+
+    frame.src = API_URL;
+
+    function request(action, payload) {
+      return Promise.race([
+        bridgeReady,
+        new Promise((_, reject) => setTimeout(() => reject(new Error('선거 서버에 연결하지 못했습니다.')), 20000))
+      ]).then(() => new Promise((resolve, reject) => {
+        const id = 'req_' + Date.now().toString(36) + '_' + (++requestNumber).toString(36);
+        const timer = setTimeout(() => {
+          pending.delete(id);
+          reject(new Error('서버 응답 시간이 초과되었습니다. 잠시 후 다시 시도해 주세요.'));
+        }, 20000);
+        pending.set(id, { resolve, reject, timer });
+        frame.contentWindow.postMessage({
+          source: 'haasang-github-pages',
+          type: 'request',
+          id,
+          action,
+          payload: payload || {}
+        }, gasOrigin);
+      }));
+    }
+
+    function showMessage(text, className) {
+      app.replaceChildren();
+      const p = document.createElement('p');
+      p.id = 'message';
+      p.textContent = text;
+      if (className) p.className = className;
+      app.appendChild(p);
+      app.setAttribute('aria-busy', 'false');
+    }
+
+    function renderResults(results) {
+      const heading = document.createElement('h2');
+      heading.textContent = '투표가 종료되었습니다.';
+      const info = document.createElement('p');
+      info.textContent = '최종 집계 결과';
+      app.append(heading, info);
+
+      if (!results || !results.counts) {
+        showMessage('결과를 불러올 수 없습니다.', 'error');
+        return;
+      }
+
+      Object.keys(results.counts).forEach(candidate => {
+        const row = document.createElement('div');
+        row.className = 'result-row';
+        const name = document.createElement('span');
+        name.textContent = candidate;
+        const count = document.createElement('strong');
+        count.textContent = results.counts[candidate] + '표';
+        row.append(name, count);
+        app.appendChild(row);
+      });
+
+      const total = document.createElement('p');
+      total.textContent = '총 투표수: ' + results.total;
+      app.appendChild(total);
+    }
+
+    function renderVotingForm(candidates) {
+      const description = document.createElement('p');
+      description.textContent = '이메일로 받은 개인 코드 5자리를 입력하고 후보자 한 명을 선택해 주세요.';
+
+      const codeLabel = document.createElement('label');
+      codeLabel.htmlFor = 'code';
+      codeLabel.textContent = '개인 투표 코드';
+
+      const input = document.createElement('input');
+      input.id = 'code';
+      input.type = 'text';
+      input.autocomplete = 'one-time-code';
+      input.autocapitalize = 'characters';
+      input.spellcheck = false;
+      input.maxLength = 5;
+      input.minLength = 5;
+      input.placeholder = '예: K7P2M';
+      input.setAttribute('aria-describedby', 'code-help');
+      input.addEventListener('input', () => {
+        input.value = input.value.toUpperCase().replace(/[^ABCDEFGHJKLMNPQRSTUVWXYZ23456789]/g, '').slice(0, 5);
+      });
+
+      const help = document.createElement('p');
+      help.id = 'code-help';
+      help.className = 'muted';
+      help.textContent = '영문 대문자와 숫자 5자리입니다. O, I, 0, 1은 사용하지 않습니다.';
+
+      const candidateLabel = document.createElement('label');
+      candidateLabel.htmlFor = 'candidate';
+      candidateLabel.textContent = '후보자';
+
+      const select = document.createElement('select');
+      select.id = 'candidate';
+      const placeholder = document.createElement('option');
+      placeholder.value = '';
+      placeholder.textContent = '후보자를 선택해 주세요';
+      placeholder.disabled = true;
+      placeholder.selected = true;
+      select.appendChild(placeholder);
+
+      const shuffled = [...candidates];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      shuffled.forEach(candidate => {
+        const option = document.createElement('option');
+        option.value = candidate;
+        option.textContent = candidate;
+        select.appendChild(option);
+      });
+
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = '투표 제출';
+
+      const message = document.createElement('p');
+      message.id = 'message';
+      message.setAttribute('role', 'status');
+      message.setAttribute('aria-live', 'polite');
+
+      let submitting = false;
+      button.addEventListener('click', async () => {
+        if (submitting) return;
+        const code = input.value.trim().toUpperCase();
+        const candidate = select.value;
+        if (!CODE_PATTERN.test(code)) {
+          message.className = 'error';
+          message.textContent = '올바른 5자리 코드를 입력해 주세요.';
+          input.focus();
+          return;
+        }
+        if (!candidate) {
+          message.className = 'error';
+          message.textContent = '후보자를 선택해 주세요.';
+          return;
+        }
+
+        submitting = true;
+        button.disabled = true;
+        input.disabled = true;
+        select.disabled = true;
+        message.className = '';
+        message.textContent = '투표를 처리하고 있습니다.';
+
+        try {
+          const result = await request('castVote', { code, candidate });
+          if (result && result.ok) {
+            message.className = 'success';
+            message.textContent = result.message || '투표가 접수되었습니다.';
+            input.value = '';
+            button.textContent = '투표 완료';
+            return;
+          }
+          message.className = 'error';
+          message.textContent = result && result.message || '투표에 실패했습니다. 다시 시도해 주세요.';
+          button.disabled = false;
+          input.disabled = false;
+          select.disabled = false;
+          submitting = false;
+        } catch (_) {
+          message.className = 'error';
+          message.textContent = '서버 응답을 확인하지 못했습니다. 코드를 다시 제출하기 전에 결과를 확인해 주세요.';
+          button.disabled = false;
+          input.disabled = false;
+          select.disabled = false;
+          submitting = false;
+        }
+      });
+
+      input.addEventListener('keydown', event => {
+        if (event.key === 'Enter') button.click();
+      });
+
+      app.replaceChildren(description, codeLabel, input, help, candidateLabel, select, button, message);
+      app.setAttribute('aria-busy', 'false');
+    }
+
+    async function loadApp() {
+      try {
+        const data = await request('getAppData');
+        app.replaceChildren();
+        if (!data || !data.status) {
+          showMessage('서버 응답이 올바르지 않습니다.', 'error');
+          return;
+        }
+        if (data.status === 'upcoming') {
+          showMessage('투표가 아직 시작되지 않았습니다.');
+          return;
+        }
+        if (data.status === 'closed') {
+          renderResults(data.results);
+          app.setAttribute('aria-busy', 'false');
+          return;
+        }
+        if (data.status !== 'open' || !Array.isArray(data.candidates) || data.candidates.length === 0) {
+          showMessage('투표 정보를 확인할 수 없습니다.', 'error');
+          return;
+        }
+        renderVotingForm(data.candidates);
+      } catch (_) {
+        showMessage('투표 정보를 불러오지 못했습니다. 잠시 후 다시 접속해 주세요.', 'error');
+      }
+    }
+
+    loadApp();
+  </script>
+</body>
+</html>
