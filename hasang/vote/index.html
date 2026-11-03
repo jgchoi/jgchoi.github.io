@@ -105,6 +105,31 @@
         return '';
       }
     }
+    async function apiGet(action, parameters) {
+      const query = new URLSearchParams({ api: 'github-pages', action, ...(parameters || {}) });
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 12000);
+
+      try {
+        const response = await fetch(API_URL + '?' + query.toString(), {
+          method: 'GET',
+          credentials: 'omit', // 핵심: 구글 로그인 쿠키 제외 -> 안드로이드 멀티계정 로그인 루프/AccountChooser 원천 차단
+          redirect: 'follow',
+          signal: controller.signal
+        });
+        clearTimeout(timer);
+        if (response.ok) {
+          const data = await response.json();
+          if (data && typeof data === 'object') return data;
+        }
+        throw new Error('비정상 응답');
+      } catch (err) {
+        clearTimeout(timer);
+        console.warn('Direct fetch failed, falling back to JSONP:', err);
+        return await jsonp(action, parameters);
+      }
+    }
+
     function jsonp(action, parameters) {
       return new Promise((resolve, reject) => {
         const callbackName = '__haasangJsonp_' + Date.now() + '_' + (++requestNumber);
@@ -127,25 +152,43 @@
 
     async function submitVote(code, candidate) {
       const requestId = crypto.randomUUID().replace(/-/g, '');
-      const body = new URLSearchParams({
-        api: 'github-pages', action: 'castVote', requestId, code, candidate
-      });
-      await fetch(API_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8' },
-        body: body.toString()
-      });
+      const payload = {
+        api: 'github-pages',
+        action: 'castVote',
+        requestId: requestId,
+        code: code,
+        candidate: candidate
+      };
 
+      try {
+        const response = await fetch(API_URL, {
+          method: 'POST',
+          credentials: 'omit', // 핵심: 구글 로그인 쿠키 제외
+          redirect: 'follow',
+          headers: {
+            'Content-Type': 'text/plain;charset=utf-8' // CORS preflight(OPTIONS) 회피
+          },
+          body: JSON.stringify(payload)
+        });
+
+        if (response.ok) {
+          const result = await response.json();
+          if (result && typeof result.ok === 'boolean') {
+            return result;
+          }
+        }
+      } catch (err) {
+        console.warn('Direct POST fetch failed, falling back to polling:', err);
+      }
+
+      // 만약 직렬화 응답을 직접 받지 못한 경우, 기존 캐시 상태 폴링으로 확인
       const deadline = Date.now() + 20000;
       while (Date.now() < deadline) {
         await new Promise(resolve => setTimeout(resolve, 600));
         try {
-          const status = await jsonp('voteStatus', { requestId });
+          const status = await apiGet('voteStatus', { requestId });
           if (status && status.status === 'complete') return status;
-        } catch (_) {
-          // 일시적인 조회 오류는 다음 주기에 다시 확인합니다.
-        }
+        } catch (_) {}
       }
       throw new Error('처리 결과를 확인하지 못했습니다. 코드를 다시 제출하기 전에 관리자에게 확인해 주세요.');
     }
@@ -306,7 +349,7 @@
 
     async function loadApp() {
       try {
-        const data = await jsonp('getAppData');
+        const data = await apiGet('getAppData');
         app.replaceChildren();
         if (!data || !data.status) {
           showMessage('서버 응답이 올바르지 않습니다.', 'error');
@@ -327,7 +370,7 @@
         }
         renderVotingForm(data.candidates);
       } catch (_) {
-        showMessage('투표 정보를 불러오지 못했습니다. 잠시 후 다시 접속해 주세요.', 'error');
+        showMessage('투표 정보를 불러오지 못했습니다. 크롬 "시크릿 탭(Incognito)"으로 접속하시거나 잠시 후 다시 시도해 주세요.', 'error');
       }
     }
 
