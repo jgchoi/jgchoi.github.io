@@ -78,8 +78,6 @@
     </section>
     <footer>
       개인 투표 코드는 한 번만 사용할 수 있습니다.
-      <span aria-hidden="true"> · </span>
-      <a href="https://script.google.com/macros/s/AKfycbzge1w1aEmiNVXGF-YaGNayrlsYTLdRN-SjLv9gd26rKekBAeLguXb_1xCrBLUsKNoGMA/exec">기존 Apps Script 페이지</a>
     </footer>
   </main>
 
@@ -90,6 +88,23 @@
     const CODE_PATTERN = /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{5}$/;
     const app = document.getElementById('app');
     let requestNumber = 0;
+
+    function getInitialCode() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        let code = params.get('code') || '';
+        if (!code && window.location.hash) {
+          const hashIndex = window.location.hash.indexOf('?');
+          if (hashIndex !== -1) {
+            const hashParams = new URLSearchParams(window.location.hash.slice(hashIndex));
+            code = hashParams.get('code') || '';
+          }
+        }
+        return code.trim().toUpperCase().replace(/[^ABCDEFGHJKLMNPQRSTUVWXYZ23456789]/g, '').slice(0, 5);
+      } catch (_) {
+        return '';
+      }
+    }
     function jsonp(action, parameters) {
       return new Promise((resolve, reject) => {
         const callbackName = '__haasangJsonp_' + Date.now() + '_' + (++requestNumber);
@@ -191,6 +206,7 @@
       input.minLength = 5;
       input.placeholder = '예: K7P2M';
       input.setAttribute('aria-describedby', 'code-help');
+      input.value = getInitialCode();
       input.addEventListener('input', () => {
         input.value = input.value.toUpperCase().replace(/[^ABCDEFGHJKLMNPQRSTUVWXYZ23456789]/g, '').slice(0, 5);
       });
